@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+</head>
+<body>
+<form method="get">
+<table>
+        <th colspan="3">ĐĂNG KÝ HỌC VIÊN</th>
+        <tr>
+            <td>Họ và tên </td>
+            <td><input type="text" name="your name" size="30" </td>
+        </tr>
+        <tr>
+            <td> Ngày sinh</td>
+            <td> <input type="text" name="date of birth" size="20"></td>
+        </tr>
+        <tr>
+            <td> Giới tính</td>
+            <td><input type="radio" name="gender" value="Male"> Nam  <input type="radio" name="gender" value="Female"> Nữ</td>
+        </tr>
+        <tr>
+            <td> Địa chỉ </td>
+            <td><textarea rows="3" cols="30" name="address" ></textarea> </td>
+        </tr>
+        <tr>
+            <td> Lớp </td>
+            <td> <select name="class">
+                <option value="Class A04"> Lớp A04</option>
+                <option value="Class A05"> Lớp A05</option>
+                <option value="Class A06"> Lớp A06</option>
+            </select> </td>
+        </tr>
+        <tr>
+            <td> Email</td>
+            <td><input type="text" name="Email" size="20"></td>
+        </tr>
+        <tr>
+            <td> Số điện thoại</td>
+            <td> <input type="text" name="phone number"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input style="margin-right: 4px" type="submit" value="Đăng ký"><input type="reset" value="Nhập lại"></td>
+
+        </tr>
+
+</table>
+</form>
+</body>
+<style>
+    table {
+        background-color: khaki;
+    }
+    th {
+        color: blue;
+        background-color: cornflowerblue;
+        text-align: left;
+    }
+    td:first-child {
+        color: blue;
+    }
+</style>
+</html>
