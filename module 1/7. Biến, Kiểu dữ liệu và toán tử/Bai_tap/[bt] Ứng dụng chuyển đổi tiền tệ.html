@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 50%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td:last-child {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<table>
+   <tr>
+       <th>Amount</th>
+       <th>From Currency</th>
+       <th>To Currency</th>
+   </tr>
+    <tr>
+        <td><input type="text" id="amount"></td>
+        <td>
+            <select id="fromCurrency">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="toCurrency">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="chuyendoitien()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td><p id="result"></p></td>
+    </tr>
+</table>
+<script>
+    function chuyendoitien() {
+        let Amount = parseInt(document.getElementById("amount").value);
+        let FromCurrency= document.getElementById("fromCurrency").value;
+        let ToCurrency = document.getElementById("toCurrency").value;
+        let Result;
+        if(FromCurrency == "USD" && ToCurrency == "VND") {
+            Result = "Result:" + (Amount*23000) + "VND";
+        } else if (FromCurrency = "VND" && ToCurrency == "USD") {
+            Result = "Result:" + (Amount/23000) + "USD";
+        } else {
+            Result = "Bạn chon sai loại tiền"
+        }
+        document.getElementById("result").innerText =Result;
+    }
+</script>
+</body>
+</html>
