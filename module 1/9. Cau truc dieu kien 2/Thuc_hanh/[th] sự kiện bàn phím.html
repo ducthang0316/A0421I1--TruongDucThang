@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img id="nobita" src="https://www.desicomments.com/wp-content/uploads/Image-Of-Nobita.jpg" alt="nobita.jpg" style="position: absolute; left: 0; top: 0; height: 200px; width: 180px">
+<script>
+    function uparrowpressed() {
+        var element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
+    }
+    
+    function downarrowpressed() {
+        var  element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+    }
+    
+    function leftarrowpressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function rightarrowpressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftarrowpressed();
+                break;
+            case 39:
+                rightarrowpressed();
+                break;
+            case 38:
+                uparrowpressed();
+                break;
+            case 40:
+                downarrowpressed();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+</html>
