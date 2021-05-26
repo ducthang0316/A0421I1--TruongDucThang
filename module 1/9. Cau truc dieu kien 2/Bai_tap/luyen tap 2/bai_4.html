@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap chieu dai hinh chu nhat:</p>
+<input type="text" id="chieudai">
+<p>nhap chieu rong hinh chu nhat</p>
+<input type="text" id="chieurong">
+<br>
+<br>
+<input type="button" value="Tinh dien tich" onclick="calculate()">
+
+<script>
+    function calculate() {
+        var width = parseInt(document.getElementById("chieurong").value);
+        var height = parseInt(document.getElementById("chieudai").value);
+        var scale = width * height;
+        alert("dien tich hinh chu nhat la:" + scale);
+    }
+</script>
+</body>
+</html>

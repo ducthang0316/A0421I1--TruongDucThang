@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>giải phương trình bậc 2 có dạng ax2 +bx + c = 0</p>
+<p>nhập giá trị của a:</p>
+<input type="text" id="number1">
+<p>nhập giá trị của b:</p>
+<input type="text" id="number2">
+<p>nhập giá trị của c:</p>
+<input type="text" id="number3">
+<input type="button" value="Solve" onclick="Solve()">
+
+<Script>
+    function Solve() {
+        var a = parseInt(document.getElementById("number1").value);
+        var b = parseInt(document.getElementById("number2").value);
+        var c = parseInt(document.getElementById("number3").value);
+        var delta = b*b - 4*a*c
+        if (a == 0){
+            if(b==0){
+                if (c == 0){
+                    alert("Phương trình vô số nghiệm")
+                } else {
+                    alert("Phuong trinh vô nghiệm")
+                }
+            } else {
+                alert("Phuong trình có nghiệm duy nhất là:" + (-c / b))
+            }
+        } else {
+            if (delta > 0) {
+                var x1 = (-b + Math.sqrt(delta)) / (2* a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                alert("Phuong trình có 2 nghiệm là: " + x1 + " và " + x2);
+            } else if (delta == 0) {
+                var nghiemKep = -b / 2*a;
+                alert("Phương trình có 1 nghiệm kép là: " + nghiemKep);
+            } else {
+                alert("Phuong trinh vo nghiem")
+            }
+        }
+    }
+</Script>
+</body>
+</html>

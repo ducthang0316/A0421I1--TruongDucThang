@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập một số nguyên bất kì:</p>
+<input type="text" id="number">
+<br>
+<input type="button" onclick="check()" value="Kiem tra">
+
+<script>
+    function check() {
+        var number = parseInt(document.getElementById("number").value);
+        if (number > 0){
+            alert("số nguyên lớn hơn 0");
+        } else {
+            alert("số nguyên bé hơn 0");
+        }
+    }
+</script>
+</body>
+</html>

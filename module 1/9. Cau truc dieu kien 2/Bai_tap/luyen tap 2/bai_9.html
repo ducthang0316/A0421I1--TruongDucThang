@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Kiểm tra ba số a,b,c có phải là một cạnh của tam giác</h3>
+<p>nhập cạnh a:</p>
+<input type="text" id="canh1">
+<p>nhập cạnh b:</p>
+<input type="text" id="canh2">
+<p>nhập cạnh c:</p>
+<input type="text" id="canh3">
+<input type="button" value="Kiểm tra" onclick="check()">
+
+<script>
+    function check() {
+        var a = parseInt(document.getElementById("canh1").value);
+        var b = parseInt(document.getElementById("canh2").value);
+        var c = parseInt(document.getElementById("canh3").value);
+        if (a > 0 && b>0 && c > 0
+            && a + b > c
+            && b + c > a
+            && a + c > b) {
+            alert("đây là 3 cạnh của 1 tam giác");
+        } else {
+            alert("đây không phải là 3 cạnh của 1 tam giác")
+        }
+    }
+</script>
+</body>
+</html>

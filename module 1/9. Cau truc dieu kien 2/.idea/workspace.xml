@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2296ae8f-34b9-40b5-bab0-b486b4c7c13b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1sqP1BliYXNs3cCV3QL1dv4sNqo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -45,7 +63,11 @@
       <workItem from="1621596929269" duration="4672000" />
       <workItem from="1621776441470" duration="5157000" />
       <workItem from="1621819861099" duration="301000" />
-      <workItem from="1621830062257" duration="3561000" />
+      <workItem from="1621830062257" duration="3959000" />
+      <workItem from="1621926495861" duration="3612000" />
+      <workItem from="1621932205187" duration="931000" />
+      <workItem from="1621952539787" duration="7039000" />
+      <workItem from="1621993560747" duration="6997000" />
     </task>
     <servers />
   </component>

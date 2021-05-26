@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tính tiền điện</h3>
+<p>Nhập số điện mà bạn đã sử dụng(kwh):</p>
+<input type="text" id="sodien">
+<input type="button" value="Tính tiền" onclick="calculate()">
+
+<script>
+    function calculate() {
+        var soDien = parseInt(document.getElementById("sodien").value);
+        var tienDien = soDien * 3000;
+        alert("Tiền điện cảu bạn là: " + tienDien + " VND")
+    }
+</script>
+</body>
+</html>

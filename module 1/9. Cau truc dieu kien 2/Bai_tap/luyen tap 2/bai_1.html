@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap do C:</p>
+<input type="text" id="temper">
+<br>
+<br>
+<input type="button" value="Chuyen doi" onclick="Exchange()">
+
+<script>
+   function Exchange() {
+       var celsius = parseFloat(document.getElementById("temper").value);
+       var doF = celsius * (9/5) + 32;
+       alert("Do F la: " + doF);
+   }
+</script>
+</body>
+</html>

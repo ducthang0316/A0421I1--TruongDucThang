@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap thoi luong cuoc goi:</p>
+<input type="text" id="time">
+<p>nhap gia cuoc 1 phut goi:</p>
+<input id="fee" type="text">
+<br>
+<br>
+<input type="button" value="Tinh cuoc phi" onclick="Check()">
+
+<script>
+    function Check() {
+        var totalTime = parseFloat(document.getElementById("time").value);
+        var fee = parseFloat(document.getElementById("fee").value);
+        var result = totalTime * fee
+        alert("Tong cuoc phi cua ban la:" + result)
+    }
+</script>
+</body>
+</html>

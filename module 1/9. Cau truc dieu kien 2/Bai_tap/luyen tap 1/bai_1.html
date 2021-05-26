@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap so thu nhat</p>
+<input type="text" id="number1">
+<br>
+<p>Nhap so thu 2</p>
+<input type="text" id="number2">
+<br>
+<input type="button" value="Check" onclick="check()">
+
+<script>
+    function check() {
+        var a = parseInt(document.getElementById("number1").value);
+        var b = parseInt(document.getElementById("number2").value);
+        if (a % b == 0){
+            alert("a chia het cho b");
+        } else {
+            alert("a khong chi het cho b");
+        }
+    }
+</script>
+</body>
+</html>

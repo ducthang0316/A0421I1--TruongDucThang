@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap chieu dai cua canh:</p>
+<input type="text" id="dai">
+<br>
+<br>
+<input type="button" value="Tinh dien tich" onclick="calculate()">
+
+<script>
+    function calculate() {
+        var chieuDai = parseInt(document.getElementById("dai").value);
+        var dienTich = chieuDai * chieuDai;
+        alert("dien tich cua hinh vuong la:" + dienTich);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap so Met:</p>
+<input type="text" id="meter">
+<br>
+<br>
+<input type="button" onclick="Exchange()" value="Chuyen Doi">
+
+<script>
+    function Exchange() {
+        var m = parseFloat(document.getElementById("meter").value);
+        var ft = m * 3.2808;
+        alert("so feet la: " + ft);
+    }
+</script>
+</body>
+</html>

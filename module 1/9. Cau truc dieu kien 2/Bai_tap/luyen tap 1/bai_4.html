@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số thứ nhất</p>
+<input type="text" id="number1">
+<p>Nhập số thứ hai</p>
+<input type="text" id="number2">
+<p>Nhập số thứ ba</p>
+<input type="text" id="number3">
+<br>
+<br>
+<input type="button" value="Kiểm tra số lớn nhất" onclick="check()">
+
+<script>
+    function check() {
+        var max;
+        var so1 = parseInt(document.getElementById("number1").value);
+        var so2 = parseInt(document.getElementById("number2").value);
+        var so3 = parseInt(document.getElementById("number3").value);
+        max = so1;
+        if (so2 > max){
+            max = so2;
+        }
+        if (so3 > max){
+            max = so3
+        }
+        document.write("số lớn nhất là:" + max);
+    }
+</script>
+</body>
+</html>

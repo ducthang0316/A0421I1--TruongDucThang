@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap do dai canh goc vuong 1:</p>
+<input type="text" id="canh1">
+<p>nhap do dai canh go vuong 2:</p>
+<input type="text" id="canh2">
+<br>
+<input type="button" value="tinh dien tich" onclick="calculate()">
+
+<script>
+    function calculate() {
+        var a = parseInt(document.getElementById("canh1").value);
+        var b = parseInt(document.getElementById("canh2").value);
+        var s = (1/2) * a * b;
+        alert("dien tich hinh tam giac la:" + s);
+    }
+</script>
+</body>
+</html>

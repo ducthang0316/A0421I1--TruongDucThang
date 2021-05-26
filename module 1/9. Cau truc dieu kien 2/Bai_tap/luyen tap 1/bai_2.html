@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap so tuoi cua ban:</p>
+<input type="text" id="age">
+<br>
+<input type="button" value="Kiem tra" onclick="check()">
+
+<script>
+    function check() {
+        var age = parseInt(document.getElementById("age").value);
+        if (age >= 15){
+            alert("bạn đủ điều kiện vào lớp 10");
+        } else {
+            alert("bạn không đủ điều kiện vào lớp 10");
+        }
+    }
+</script>
+</body>
+</html>
