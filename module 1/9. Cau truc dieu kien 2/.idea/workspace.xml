@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2296ae8f-34b9-40b5-bab0-b486b4c7c13b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 1/bai_7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/luyen tap 2/bai_9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +32,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -67,11 +51,17 @@
       <workItem from="1621926495861" duration="3612000" />
       <workItem from="1621932205187" duration="931000" />
       <workItem from="1621952539787" duration="7039000" />
-      <workItem from="1621993560747" duration="6997000" />
+      <workItem from="1621993560747" duration="8357000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="173" y="171" key="FileChooserDialogImpl" timestamp="1622002923341">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="173" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1622002923341" />
   </component>
 </project>

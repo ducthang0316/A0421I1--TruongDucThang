@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let F0 = 0 , F1= 1, temp;
+    while (true){
+        temp= F0 + F1;
+        if (temp % 5 ==0){
+            document.write(temp);
+            break;
+        }
+        F0 = F1;
+        F1 = temp;
+    }
+</script>
+</body>
+</html>

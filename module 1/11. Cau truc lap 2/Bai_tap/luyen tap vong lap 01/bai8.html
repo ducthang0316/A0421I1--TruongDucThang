@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Hãy thử đoán xem</h2>
+<input type="button" value="Chơi" onclick="Play()">
+<input type="button" value="Chơi lại" onclick="Reset()">
+<script>
+    function Play() {
+        var startNumber = parseInt(prompt("Nhập khoảng bắt đầu"));
+        var endNumber = parseInt(prompt("Nhập khoảng kết thúc"));
+        var yournumber = parseInt(prompt("Nhập số bạn đoán"));
+        var fixNumber = Math.floor(Math.random()* endNumber) + startNumber;
+        var count =0;
+        console.log(fixNumber);
+        while (count <3){
+            if (yournumber == fixNumber){
+                alert("bạn đã đoán đúng!")
+                break;
+            } else {
+                alert("Sai rồi! Mời bạn thử lại.")
+                yournumber = parseInt(prompt("nhập lại"))
+                count += 1;
+            }
+            if (count> 2){
+                alert("Chúc bạn may mắn lần sau")
+                break;
+            }
+        }
+    }
+    function Reset() {
+        var startNumber = parseInt(prompt("Nhập khoảng bắt đầu"));
+        var endNumber = parseInt(prompt("Nhập khoảng kết thúc"));
+        var yournumber = parseInt(prompt("Nhập số bạn đoán"));
+        var fixNumber = Math.floor(Math.random()* endNumber) + startNumber;
+        var count =0;
+        console.log(fixNumber);
+        while (count <3){
+            if (yournumber == fixNumber){
+                alert("bạn đã đoán đúng!")
+                break;
+            } else {
+                alert("Sai rồi! Mời bạn thử lại.")
+                yournumber = parseInt(prompt("nhập lại"))
+                count += 1;
+            }
+            if (count> 2){
+                alert("Chúc bạn may mắn lần sau")
+                break;
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
