@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập một số nguyên dương cần tính giai thừa:</p>
+<input type="text" id="number">
+<input type="button" value="Tính" onclick="calculate()">
+<script>
+  function calculate() {
+      var num = parseInt(document.getElementById("number").value);
+      if (num < 0) {
+          alert("hãy nhập một số nguyên dương!");
+      } else if ( num == 0 ){
+          alert("Giai thừa của 0 = 1 ")
+      } else {
+          let result = 1;
+          for (i = 1; i <= num; i++){
+              result *= i
+          }
+          document.write(result);
+      }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="height" placeholder="Nhap chieu cao hinh chu nhat"> <br>
+<input type="text" id="width" placeholder="Nhap chieu rong hinh chu nhat"> <br>
+<input type="button" value="Draw" onclick="draw()">
+<script>
+    function draw() {
+        let height = parseInt(document.getElementById("height").value);
+        let width = parseInt(document.getElementById("width").value);
+        for (i=1; i<= height; i++){
+            for (j=1; j<= width; j++){
+                if (i == 1 || i==height || j == 1 || j==width){
+                    document.write(" * ");
+                } else {
+                    document.write(" &nbsp;&nbsp; ");
+                }
+            }
+            document.write("<br/>");
+        }
+    }
+</script>
+</body>
+</html>

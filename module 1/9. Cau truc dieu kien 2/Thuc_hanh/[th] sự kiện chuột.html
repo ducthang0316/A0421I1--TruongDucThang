@@ -11,15 +11,15 @@
     <input type="button" value="click me" onclick="moveright()">
 </form>
 <script>
-    var imgobj= null;
-    imgobj = document.getElementById("myimage");
+    var imgObj= null;
+    imgObj = document.getElementById("myimage");
     function init() {
-        imgobj= document.getElementById("myimage");
-        imgobj.style.position = 'relative';
-        imgobj.style.left = '0px';
+        imgObj= document.getElementById("myimage");
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
     }
     function moveright() {
-        imgobj.style.left = parseInt(imgobj.style.left) + 10 + 'px';
+        imgObj.style.left = parseInt(imgobj.style.left) + 10 + 'px';
     }
     window.onload = init();
 </script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 0,
+        b = 1,
+        fn,
+        num = parseInt(prompt("Nhập số lượng số Fibonacci cần tìm: "));
+    for(i =0; i <num; i++){
+       if ( i <= 1){
+           fn = i;
+       } else {
+           fn = a + b;
+           a = b;
+           b = fn;
+       }
+       document.write(fn + ", ");
+    }
+</script>
+</body>
+</html>

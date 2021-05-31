@@ -7,22 +7,22 @@
 <body onload="docReady()">
 <img id="nobita" src="https://www.desicomments.com/wp-content/uploads/Image-Of-Nobita.jpg" alt="nobita.jpg" style="position: absolute; left: 0; top: 0; height: 200px; width: 180px">
 <script>
-    function uparrowpressed() {
+    function upArrowPressed() {
         var element = document.getElementById("nobita");
         element.style.top = parseInt(element.style.top) - 5 + "px";
     }
     
-    function downarrowpressed() {
+    function downArrowPressed() {
         var  element = document.getElementById("nobita");
         element.style.top = parseInt(element.style.top) + 5 + "px";
     }
     
-    function leftarrowpressed() {
+    function leftArrowPressed() {
         var element = document.getElementById("nobita");
         element.style.left = parseInt(element.style.left) - 5 + 'px';
     }
 
-    function rightarrowpressed() {
+    function rightArrowPressed() {
         var element = document.getElementById("nobita");
         element.style.left = parseInt(element.style.left) + 5 + 'px';
     }
@@ -30,16 +30,16 @@
     function moveSelection(evt) {
         switch (evt.keyCode) {
             case 37:
-                leftarrowpressed();
+                leftArrowPressed();
                 break;
             case 39:
-                rightarrowpressed();
+                rightArrowPressed();
                 break;
             case 38:
-                uparrowpressed();
+                upArrowPressed();
                 break;
             case 40:
-                downarrowpressed();
+                downArrowPressed();
                 break;
         }
     }

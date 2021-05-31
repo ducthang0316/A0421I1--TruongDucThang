@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tinh lai ngan hang</h3>
+<p>Tien goc:</p>
+<input type="text" id="capital">
+<p>Lai xuat ngan hang:</p>
+<input type="text" id="interest" placeholder="%">
+<p>Thoi han gui:</p>
+<input type="text" id="time" placeholder="Month">
+<input type="button" value="Tinh" onclick="calculate()">
+<script>
+    function calculate() {
+        let capital = parseInt(document.getElementById("capital").value);
+        let interest = parseFloat(document.getElementById("interest").value);
+        let time = parseInt(document.getElementById("time").value);
+        let yourMoney = capital * ((interest/100) / 12) * time;
+        alert("tien lai cua ban la: " + yourMoney);
+    }
+</script>
+</body>
+</html>
