@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, "df", 8, "g", "h", 5, 9];
+    let count = 0;
+    let num = "";
+    for (i = 0; i < arr.length; i++){
+        if (isNaN(arr[i]) === false) {
+            count++;
+            num += arr[i] + ", ";
+        }
+    }
+    console.log(count);
+    console.log(num);
+</script>
+</body>
+</html>

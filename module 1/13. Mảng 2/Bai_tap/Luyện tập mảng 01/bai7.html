@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb;
+    let arr= [];
+    do {
+        numb = parseInt(prompt("nhap so luong phan tu: "))
+    } while (numb <= 0 || isNaN(numb));
+    for (i = 0; i < numb; i++){
+        arr[i] = parseInt(prompt("nhap gia tri phan tu tai " + i))
+    }
+    let v = parseInt(prompt("nhap gia tri phan tu V: "));
+    console.log(v);
+    let temp = v + " is not in the array";
+    for (j=0; j< arr.length; j++){
+        if (arr[j] == v){
+            temp = v + " is in the array";
+            arr.splice(j,1)
+        }
+    }
+    console.log(temp);
+    console.log(arr);
+</script>
+</body>
+</html>

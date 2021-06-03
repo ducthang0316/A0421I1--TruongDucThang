@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap mot chuoi ki tu:")
+    let count = 1;
+    let newStr = str.trim();
+    for (i = 0; i < newStr.length; i++){
+        if (newStr[i] == " " && newStr[i+1] != " ") {
+            count++
+        }
+    }
+    alert("so tu trong chuoi la: " + count)
+
+</script>
+</body>
+</html>

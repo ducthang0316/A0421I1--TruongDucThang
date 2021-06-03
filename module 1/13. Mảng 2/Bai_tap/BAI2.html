@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var english = ["do", "take", "recieve", "leave", "wash"];
+    var vietNamese =["làm", "lấy", "nhận", "rời đi", "rửa"];
+    var word = prompt("type your word here:");
+    for (i = 0; i < english.length; i++){
+        if (english[i] == word){
+            alert(vietNamese[i]);
+            break;
+        } else {
+            alert("khong tim thay tu");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

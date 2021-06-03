@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--// bai 1-->
+<!--// var myColor = ["red", "green", "white", "black"];-->
+<!--// console.log(myColor.join());-->
+<script>
+    const numb= prompt("enter a seri of numbers:");
+    const arrs = numb.toString();
+    const result = [arrs[0]];
+
+    for(x=1; x < arrs.length; x++) {
+        if((arrs[x-1] % 2 === 0)&&(arrs[x] % 2 === 0)) {
+            result.push('-', arrs[x]);
+        }
+        else {
+            result.push(arrs[x]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

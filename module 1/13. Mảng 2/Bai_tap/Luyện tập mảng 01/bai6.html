@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [];
+    for (i=0; i< 10; i++){
+        num[i] = parseInt(prompt("nhap phan tu tai " + i));
+    }
+    console.log(num);
+    let v = parseInt(prompt("nhap phan tu V: "));
+    console.log(v);
+    let temp = v + " is not in the array";
+    for (j= 0; j < num.length; j++){
+        if (v == num[j]){
+            temp = v + " is in th array";
+        }
+        }
+    console.log(temp);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let quantity;
+    do {
+        quantity = parseInt(prompt("nhap so luong phan tu cua chuoi"));
+    } while (quantity <=0 || isNaN(quantity));
+    let arr = [];
+    for (i=0; i < quantity; i++){
+        arr[i] = parseInt(prompt("nhan phan tu tai vi tri " + i))
+    }
+    console.log(arr)
+    let count = 0;
+    for (i =0; i < arr.length; i++){
+        if (arr[i] < 0){
+            count++;
+        }
+    }
+    console.log("so luong phan tu la so nguyen am la: " + count);
+</script>
+</body>
+</html>

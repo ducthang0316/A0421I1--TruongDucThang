@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let quantity;
+    do {
+        quantity = parseInt(prompt("nhap so luong phan tu:"))
+    } while (quantity <= 0 || isNaN(quantity))
+    let num = [];
+    for (i =0; i < quantity; i++){
+        num[i] = parseInt(prompt("nhap phan tu so " + i))
+    }
+    // console.log(num.reverse())
+    let firstNum = 0;
+    let lastNum = num.length -1;
+    while (firstNum < lastNum){
+        let a = num[firstNum];
+        num[firstNum] = num[lastNum];
+        num[lastNum]= a;
+        firstNum++;
+        lastNum--;
+    }
+    console.log(num);
+</script>
+</body>
+</html>
