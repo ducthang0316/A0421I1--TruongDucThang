@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        var numb = parseInt(prompt("enter a number"));
+    } while (isNaN(numb)|| numb < 0);
+
+    function calFactorial(number){
+        var factorial = 1;
+        if (numb == 0 || numb == 1){
+            factorial = 1;
+        } else {
+            for (i= 1; i <= numb; i++){
+                factorial *= i;
+            }
+        }
+        return factorial;
+    }
+    alert("Giai thua cua "+ numb + " la: " +  calFactorial(numb));
+</script>
+</body>
+</html>

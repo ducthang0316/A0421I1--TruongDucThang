@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Enter a number: </p>
+<input type="text" id="number">
+<button onclick="calculate()">Calculate</button>
+<br>
+<p id="result"></p>
+
+<script>
+    function calculate(number) {
+        let numb = parseInt(document.getElementById("number").value);
+        numb+=1;
+        document.getElementById("result").innerHTML = "Result: " + numb;
+    }
+</script>
+</body>
+</html>

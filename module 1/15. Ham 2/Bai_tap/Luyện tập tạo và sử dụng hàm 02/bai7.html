@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let firstNumb = parseInt(prompt("Enter the first number"));
+    let secondNumb =parseInt(prompt("Enter the second number"));
+    function swapNumber(a,b) {
+            let temp = firstNumb;
+            firstNumb = secondNumb;
+            secondNumb = temp;
+            document.getElementById("result").innerHTML = "The order after swap is: " + firstNumb + " ; " + secondNumb;
+        }
+    swapNumber()
+</script>
+</body>
+</html>

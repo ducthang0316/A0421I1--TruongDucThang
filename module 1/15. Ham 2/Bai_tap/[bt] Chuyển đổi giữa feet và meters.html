@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển đổi giữa feet và meters</h3>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Unit</th>
+        <th>To Unit</th>
+    </tr>
+    <td><input type="number" id="amount"></td>
+    <td>
+        <select id="fromUnit">
+            <option value="Meter">Meter</option>
+            <option value="Feet">Feet</option>
+        </select>
+    </td>
+    <td>
+        <select id="toUnit">
+            <option value="Feet">Feet</option>
+            <option value="Meter">Meter</option>
+        </select>
+    </td>
+    <td>
+        <button onclick="calculate()">Convert</button>
+    </td>
+    <tr>
+        <td><p id="result"></p></td>
+    </tr>
+</table>
+
+<script>
+    function feetToMeter(number) {
+        return number * 0.305;
+    }
+    function meterToFeet(number) {
+        return number * 3.279;
+    }
+    function calculate() {
+        var amount = parseFloat(document.getElementById("amount").value);
+        var fromUnit = document.getElementById("fromUnit").value;
+        var toUnit = document.getElementById("toUnit").value;
+       if (fromUnit == "Meter" && toUnit == "Feet") {
+                document.getElementById("result").innerText = meterToFeet(amount) + " ft"
+       } else if (fromUnit == "Feet" && toUnit == "Meter"){
+                document.getElementById("result").innerText = feetToMeter(amount) + " m"
+       } else {
+           alert("You have chosen wrong unit")
+       }
+    }
+</script>
+</body>
+</html>

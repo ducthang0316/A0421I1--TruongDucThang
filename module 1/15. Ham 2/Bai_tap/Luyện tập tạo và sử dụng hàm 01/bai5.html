@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nameOfPerson = prompt("Enter your star's name:");
+    function findZodiac(name) {
+        let starName = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let zodiac = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (i = 0; i < starName.length; i++) {
+                if (nameOfPerson == starName[i]) {
+                    return "Your star's zodiac is: " + zodiac[i];
+                }
+        }
+        return  "Please check your star's name again!!";
+    }
+alert(findZodiac(nameOfPerson));
+</script>
+</body>
+</html>

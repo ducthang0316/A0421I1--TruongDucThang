@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number == 1){
+            var result = document.write(number + " is not a prime number");
+        }
+            for (i = 2; i < Math.sqrt(number); i++){
+                if (number % i == 0){
+                     result = document.write(number + " is not a prime number");
+                    break;
+                } else {
+                    result = document.write(number + " is a prime number");
+                    break;
+                }
+            }
+        return result;
+    }
+    let numb = parseInt(prompt("Enter your number"));
+    isPrime(numb);
+</script>
+</body>
+</html>

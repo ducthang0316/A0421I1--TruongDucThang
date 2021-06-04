@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (i= 0; i <3; i++){
+        arr[i] = parseInt(prompt("enter the number at position " + i));
+    }
+    console.log(arr);
+    function findMin() {
+        let min = arr[0];
+        for (j = 0; j < arr.length; j++){
+            if (min > arr[j]){
+                min = arr[j];
+            }
+        }
+        return min;
+    }
+    alert("The minimun value the the 3 number is: " + findMin());
+</script>
+</body>
+</html>

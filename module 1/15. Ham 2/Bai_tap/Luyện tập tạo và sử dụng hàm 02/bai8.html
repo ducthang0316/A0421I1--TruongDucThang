@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [2, 3, 8, 45, 26, 19, 24, 16];
+    document.write("The original array: " + arr + "<br/>");
+    function reverseArr() {
+        let first = 0;
+        let last = arr.length -1;
+        while (first < last){
+            let temp = arr[first];
+            arr[first]= arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
+        return arr;
+    }
+    document.write("The array after reversed: " + reverseArr());
+</script>
+</body>
+</html>
