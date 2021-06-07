@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid black;
+            height: 100px;
+            width: 40%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <h3>Tính tiền điện</h3>
+<table>
+    <tr>
+        <th>KWH</th>
+        <th>Gia tien</th>
+    </tr>
+    <tr>
+        <td>< 200</td>
+        <td>3.000vnd</td>
+    </tr>
+    <tr>
+        <td>< 500</td>
+        <td>2.000vnd</td>
+    </tr>
+    <tr>
+        <td>< 1000</td>
+        <td>1.500vnd</td>
+    </tr>
+    <tr>
+        <td>> 1000</td>
+        <td>1.100vnd</td>
+    </tr>
+</table>
 <p>Nhập số điện mà bạn đã sử dụng(kwh):</p>
 <input type="text" id="sodien">
 <input type="button" value="Tính tiền" onclick="calculate()">
@@ -13,7 +44,16 @@
 <script>
     function calculate() {
         var soDien = parseInt(document.getElementById("sodien").value);
-        var tienDien = soDien * 3000;
+        var tienDien;
+        if (soDien < 200){
+            tienDien = soDien * 3000;
+        } else  if (soDien< 500){
+            tienDien = soDien * 2000;
+        }else if (soDien < 1000){
+            tienDien = soDien * 1500;
+        } else {
+            tienDien = soDien * 1100;
+        }
         alert("Tiền điện cảu bạn là: " + tienDien + " VND")
     }
 </script>

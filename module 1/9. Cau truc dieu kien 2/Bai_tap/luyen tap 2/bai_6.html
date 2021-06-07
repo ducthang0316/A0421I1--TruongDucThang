@@ -14,18 +14,18 @@
 
 <script>
     function solve() {
-        var a = parseInt(document.getElementById("number1").value);
-        var b= parseInt(document.getElementById("number2").value);
-        var x;
-        if (a == 0) {
-            if (b == 0){
+        var firstNum = parseInt(document.getElementById("number1").value);
+        var secondNum= parseInt(document.getElementById("number2").value);
+        var result;
+        if (firstNum == 0) {
+            if (secondNum == 0){
                 alert("phương trình vô số nghiệm");
             } else {
                 alert("phuong trình vô nghiệm ");
             }
         } else {
-            x = -b / a;
-            alert("phương trình có nghiệm là:" + x);
+            result = -secondNum / firstNum;
+            alert("phương trình có nghiệm là:" + result);
         }
     }
 </script>

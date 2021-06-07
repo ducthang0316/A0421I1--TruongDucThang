@@ -18,11 +18,11 @@
 
 <script>
     function check() {
-        var a = parseFloat(document.getElementById("score1").value);
-        var b = parseFloat(document.getElementById("score2").value);
-        var c = parseFloat(document.getElementById("score3").value);
+        var componentScore = parseFloat(document.getElementById("score1").value);
+        var midtermScrore = parseFloat(document.getElementById("score2").value);
+        var finalScore = parseFloat(document.getElementById("score3").value);
         var average;
-        average = (a + (b*2) + (c*3)) / 6
+        average = (componentScore + (midtermScrore*2) + (finalScore*3)) / 6;
         if(average <= 5){
             alert("điểm trung bình các môn là:" + average);
             alert("Học lực trung bình");

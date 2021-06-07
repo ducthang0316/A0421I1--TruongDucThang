@@ -26,9 +26,20 @@
             case 9:
             case 11:
                 alert('so ngay trong thang là 30');
-                break
+                break;
             case 2:
-                alert('so ngay trong thang là 28 hoac 29');
+                let year = parseInt(prompt("nhap so nam"));
+                if(
+                    year % 4 === 0 && year % 100 !== 0 ||
+                    year % 100 ===0 && year %400 !== 0 ||
+                    year % 100 === 0 && year % 400 ===0
+                ) {
+                    alert("so ngay trong thang la 29 ");
+                    break;
+                } else {
+                    alert("so ngay trong thang là 28");
+                    break;
+                }
             default:
                 alert('ban nhap sai so thang');
         }

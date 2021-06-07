@@ -14,9 +14,9 @@
 <input type="button" onclick="calculate()" value="BMI">
 <script>
     function calculate() {
-        var a = parseFloat(document.getElementById("weight").value);
-        var b = parseFloat(document.getElementById("height").value);
-        var bmi = a/(b*b);
+        var weight = parseFloat(document.getElementById("weight").value);
+        var height = parseFloat(document.getElementById("height").value);
+        var bmi = weight/(height*height);
         if (bmi < 18.5) {
             alert('you are Underweight');
         } else if(bmi < 25.0) {

@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table{
+            height: 100px;
+            width: 40%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+<table>
+    <tr>
+        <th>So phut goi</th>
+        <th>Cuoc phi</th>
+    </tr>
+    <tr>
+        <td>< 500 phut</td>
+        <td>3.000đ</td>
+    </tr>
+    <tr>
+        <td>< 1.000 phut</td>
+        <td>2.000đ</td>
+    </tr>
+    <tr>
+        <td>< 2.000 phut</td>
+        <td>1.500đ</td>
+    </tr>
+    <tr>
+      <td> > 2000 phut </td>
+        <td>1.000d</td>
+    </tr>
+</table>
 <p>nhap thoi luong cuoc goi:</p>
 <input type="text" id="time">
-<p>nhap gia cuoc 1 phut goi:</p>
-<input id="fee" type="text">
 <br>
 <br>
 <input type="button" value="Tinh cuoc phi" onclick="Check()">
@@ -16,9 +46,17 @@
 <script>
     function Check() {
         var totalTime = parseFloat(document.getElementById("time").value);
-        var fee = parseFloat(document.getElementById("fee").value);
-        var result = totalTime * fee
-        alert("Tong cuoc phi cua ban la:" + result)
+        var result;
+        if (totalTime < 500){
+            result = totalTime * 3000;
+        } else if (totalTime < 1000){
+            result = totalTime * 2000;
+        } else if (totalTime < 2000){
+            result= totalTime * 1500;
+        } else {
+            result = totalTime * 1000;
+        }
+        alert("Tong cuoc phi cua ban la:" + result + "VND")
     }
 </script>
 </body>

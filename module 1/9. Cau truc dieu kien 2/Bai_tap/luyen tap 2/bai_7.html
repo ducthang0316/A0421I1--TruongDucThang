@@ -16,27 +16,27 @@
 
 <Script>
     function Solve() {
-        var a = parseInt(document.getElementById("number1").value);
-        var b = parseInt(document.getElementById("number2").value);
-        var c = parseInt(document.getElementById("number3").value);
-        var delta = b*b - 4*a*c
-        if (a == 0){
-            if(b==0){
-                if (c == 0){
+        var thamSo1 = parseInt(document.getElementById("number1").value);
+        var thamSo2 = parseInt(document.getElementById("number2").value);
+        var thamSo3 = parseInt(document.getElementById("number3").value);
+        var delta = thamSo2*thamSo2 - 4*thamSo1*thamSo3;
+        if (thamSo1 === 0){
+            if(thamSo2===0){
+                if (thamSo3 === 0){
                     alert("Phương trình vô số nghiệm")
                 } else {
                     alert("Phuong trinh vô nghiệm")
                 }
             } else {
-                alert("Phuong trình có nghiệm duy nhất là:" + (-c / b))
+                alert("Phuong trình có nghiệm duy nhất là:" + (-thamSo3 / thamSo2))
             }
         } else {
             if (delta > 0) {
-                var x1 = (-b + Math.sqrt(delta)) / (2* a);
-                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
-                alert("Phuong trình có 2 nghiệm là: " + x1 + " và " + x2);
-            } else if (delta == 0) {
-                var nghiemKep = -b / 2*a;
+                var nghiem1 = (-thamSo2 + Math.sqrt(delta)) / (2* thamSo1);
+                var nghiem2 = (-thamSo2 - Math.sqrt(delta)) / (2 * thamSo1);
+                alert("Phuong trình có 2 nghiệm là: " + nghiem1 + " và " + nghiem2);
+            } else if (delta === 0) {
+                var nghiemKep = -thamSo2 / 2*thamSo1;
                 alert("Phương trình có 1 nghiệm kép là: " + nghiemKep);
             } else {
                 alert("Phuong trinh vo nghiem")
