@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập từ muốn kiểm tra: ");
+    let firstChar = 0;
+    let lastChar = (str.length -1);
+    function isPalindrome(first, last) {
+        if (str[firstChar] !== str[lastChar]){
+           return false;
+        } else {
+            while (firstChar < lastChar){
+                isPalindrome(firstChar++, lastChar--)
+            }
+        }
+        return true;
+    }
+
+
+    if (isPalindrome()){
+        alert("Day la chuoi Palindrome");
+    } else {
+        alert("Day khong phai la chuoi Palindrome");
+    }
+
+</script>
+</body>
+</html>
