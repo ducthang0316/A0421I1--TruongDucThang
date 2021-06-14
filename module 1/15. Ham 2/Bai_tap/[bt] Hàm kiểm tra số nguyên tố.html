@@ -7,22 +7,23 @@
 <body>
 <script>
     function isPrime(number) {
-        if (number == 1){
-            var result = document.write(number + " is not a prime number");
+        var result =  true;
+        if (number === 1){
+            result = document.write(number + " is not a prime number");
         }
-            for (i = 2; i < Math.sqrt(number); i++){
-                if (number % i == 0){
-                     result = document.write(number + " is not a prime number");
-                    break;
-                } else {
-                    result = document.write(number + " is a prime number");
-                    break;
+            for (i = 2; i <= Math.sqrt(number); i++){
+                if (number % i === 0){
+                     result = false;
                 }
             }
         return result;
     }
     let numb = parseInt(prompt("Enter your number"));
-    isPrime(numb);
+    if (isPrime(numb)){
+        alert(`${numb} is a prime number`)
+    } else {
+        alert(`${numb} is not a prime number`)
+    }
 </script>
 </body>
 </html>

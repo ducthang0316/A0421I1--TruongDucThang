@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let productArr = ["Sony Xperia", "Samsung Galaxy","Nokia 6","Xiaomi Redmi Note 4","Apple Iphone 6s",
+        "Xiaomi Mi 5s Plus","Apple Iphone 8 Plus","Fujitsu F04E","Oppo A71"];
+
+    function displayProduct () {
+        document.body.innerHTML = "";
+        document.writeln("<h3> Add New Product </h3>");
+        document.write("<span>");
+        document.writeln("<input type=\"text\" placeholder=\"New product\" id=\"newproduct\">");
+        document.writeln("<button style='background-color: #66FF66' onclick=\"addProduct()\">Add</button>" + "</br>");
+        document.write("</span>");
+
+        document.write("<h3> Display All Product </h3>");
+        document.write("<table cellspacing='5px' cellpadding='5px' width='40%'>");
+        document.writeln("<tr style='font-weight: bold'>" + "<td>Product Names</td>" + "<td colspan='2'></td>"+ "<td style= 'color: brown'>" + productArr.length + " products" + "</td>");
+        for (i =0 ; i < productArr.length; i++){
+            document.write("<tr>");
+            document.write("<td>" + productArr[i] + "</td>");
+            document.writeln("<td> <button onclick='editProduct("+ i + ")' style='background-color: #66FF66'> Edit </button> </td>");
+            document.writeln("<td> <button onclick='deleteProduct("+ i + ")' style='background-color: #66FF66'> Delete </button> </td>");
+            document.write("</tr>")
+        }
+        document.write("</table>");
+    }
+
+    function addProduct(){
+        let newProduct = document.getElementById("newproduct").value;
+        for (x in productArr){
+            if (newProduct.indexOf(productArr[x]) < 0){
+                productArr.push(newProduct);
+                alert(`Đã thêm ${newProduct} vào danh sách sản phẩm`);
+                displayProduct();
+                break;
+            }
+            alert(`Sản phẩm ${newProduct} đã tồn tại`);
+            break;
+        }
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Bạn có chắc muốn xóa " + productArr[index] + " hay không?")) {
+            productArr.splice(index, 1);
+        }
+        displayProduct();
+    }
+
+    function editProduct(index) {
+        for (i = 0; i < productArr.length; i++){
+            if (i == index){
+                let editedProduct = prompt("Nhập dữ liệu bạn muốn chỉnh sửa");
+                productArr[i] = editedProduct;
+                alert("Đã chỉnh sửa thành công" );
+                break;
+            }
+        }
+        displayProduct()
+    }
+
+    displayProduct();
+</script>
+</body>
+</html>
