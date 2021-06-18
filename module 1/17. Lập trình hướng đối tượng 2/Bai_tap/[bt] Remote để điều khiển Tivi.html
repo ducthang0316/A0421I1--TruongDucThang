@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Tv {
+        constructor(channel, volume, status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status;
+        }
+        getCurrentChannel(){
+            return this.channel;
+        }
+        getCurrentVolume (){
+            return this.volume;
+        }
+        getStatus(){
+            return this.status;
+        }
+        changeChannel (channel){
+            this.channel = channel;
+        }
+        turnVolUp (volume){
+            this.volume += volume;
+        }
+        turnVolDown (volume){
+            this.volume -= volume;
+        }
+        turnOnTv (){
+            this.status = "ON";
+        }
+        turnOffTv (){
+            this.status = "OFF";
+        }
+    }
+    class Remote {
+        connectRemoteToTv (tv){
+            this.tv = tv;
+        }
+        turnOnTvByRemote (){
+            tv.turnOnTv();
+        }
+        turnOffTvByRemote(){
+            tv.turnOffTv();
+        }
+        changeChannelByRemote (channel){
+            tv.changeChannel(channel);
+        }
+        turnUpVolByRemote ( volume){
+            tv.turnVolUp(volume);
+        }
+        turnDownVolByRemote ( volume){
+            tv.turnVolDown(volume);
+        }
+    }
+    let tv = new Tv(7,20, "OFF");
+    let remote = new Remote();
+
+    remote.connectRemoteToTv(tv);
+
+    remote.turnOnTvByRemote(tv);
+    alert("TV is " + tv.getStatus());
+
+    remote.changeChannelByRemote(3);
+    alert("the current channel is " + tv.getCurrentChannel());
+
+    remote.turnUpVolByRemote (2);
+    alert("the current volume is " + tv.getCurrentVolume());
+
+    remote.turnOffTvByRemote(tv);
+    alert("TV is " + tv.getStatus());
+</script>
+</body>
+</html>

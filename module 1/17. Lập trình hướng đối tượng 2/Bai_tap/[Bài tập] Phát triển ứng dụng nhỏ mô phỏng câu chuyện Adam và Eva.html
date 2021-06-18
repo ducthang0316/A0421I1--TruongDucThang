@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getWeight (){
+            return this.weight;
+        }
+        isEmpty (){
+            if (this.weight <=0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        decrease(){
+            if (this.isEmpty()){
+                alert("the apple has been eaten. Please take another one.")
+            } else {
+                this.weight --;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        isMale (){
+            if (this.gender === "Male"){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        setGender (){
+            if (this.isMale()){
+               console.log("Male")
+            } else {
+                console.log("Female")
+            }
+        }
+        say (message){
+            this.message = message;
+            alert(this.name + " says: " + this.message);
+
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        checkApple(apple){
+            return !apple.isEmpty();
+        }
+        eat(apple){
+            if (this.checkApple(apple)){
+                apple.decrease();
+                this.weight++;
+            } else {
+                alert("the apple has been eaten. Please take another one.");
+            }
+        }
+    }
+
+    let apple = new Apple(10);
+    let adam = new Human("Adam", "Male", 70);
+    let eva = new Human("Eva", "Female", 50);
+    adam.eat(apple);
+    eva.eat(apple);
+    alert("The remain weight of the apple is: "+apple.getWeight());
+    alert("Adam weight: " + adam.getWeight());
+    alert("Eva weight: " + eva.getWeight());
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mouse {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+        isDeath (){
+            if (this.weight <= 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        mouseSound (sound){
+            this.sound = sound;
+            alert(this.name + ": " + this.sound);
+        }
+    }
+
+    class Cats {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+        catsSound (sound){
+            this.sound = sound;
+            alert(this.name + ": " + this.sound);
+        }
+        catchMouse (mouse){
+            if (mouse.speed < this.speed){
+                return true;
+            } else {
+                return  false;
+            }
+        }
+        eatMouse (mouse){
+            if (this.catchMouse(mouse)){
+                if (!mouse.isDeath()) {
+                    this.weight ++;
+                    mouse.weight --;
+                    // alert(mouse.mouseSound("chít, chít, chít"))
+                }
+                else {
+                    alert("The mouse has been eaten. Catch another one")
+                }
+            }
+            else {
+                alert(mouse.name + " is ran away");
+            //     alert(this.name + this.catsSound("meow, meow, meow"))
+            }
+        }
+    }
+
+    let mouse1 = new Mouse("jerry", 1, 10);
+    let cat1 = new Cats("tom", 20, 30);
+    cat1.catchMouse(mouse1);
+    cat1.eatMouse(mouse1);
+    alert(`The weight of ${mouse1.name} after the chase is ${mouse1.weight}`);
+    alert(`The weight of ${cat1.name} after the chase is ${cat1.weight}`);
+</script>
+</body>
+</html>
