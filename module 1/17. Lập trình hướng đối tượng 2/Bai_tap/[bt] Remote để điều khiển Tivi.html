@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        img {
+            height: 100px;
+            width: 300px;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
+<p>The current channel</p>
+<img id="displayChannel" src="" alt="">
+<button onclick="changeChannel()">Change Channel</button>
 <script>
     class Tv {
         constructor(channel, volume, status) {
@@ -13,7 +23,11 @@
             this.status = status;
         }
         getCurrentChannel(){
-            return this.channel;
+            if (this.channel == 3 ){
+                document.getElementById("displayChannel").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/VTV3_logo_2013_final.svg/1200px-VTV3_logo_2013_final.svg.png";
+            } else if (this.channel == 7){
+                document.getElementById("displayChannel").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/VTV7_logo_2016_final.svg/1200px-VTV7_logo_2016_final.svg.png";
+            }
         }
         getCurrentVolume (){
             return this.volume;
@@ -61,18 +75,19 @@
     let remote = new Remote();
 
     remote.connectRemoteToTv(tv);
+    tv.getCurrentChannel();
 
     remote.turnOnTvByRemote(tv);
     alert("TV is " + tv.getStatus());
 
-    remote.changeChannelByRemote(3);
-    alert("the current channel is " + tv.getCurrentChannel());
-
     remote.turnUpVolByRemote (2);
     alert("the current volume is " + tv.getCurrentVolume());
 
-    remote.turnOffTvByRemote(tv);
-    alert("TV is " + tv.getStatus());
+    function changeChannel(){
+        remote.changeChannelByRemote(3);
+        tv.getCurrentChannel();
+    }
+
 </script>
 </body>
 </html>
