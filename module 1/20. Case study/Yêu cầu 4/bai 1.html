@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function main() {
+    let inputStr = prompt("Enter a string ");
+    function processString() {
+        let str = inputStr.trim().toLowerCase();
+        let arrayOfStr = str.split(' ');
+
+        let filtered = arrayOfStr.filter(function (value, index, arr) {
+            return value !== ""
+        });
+        str = filtered.join(' ');
+
+        str = str.replace(str[0], str[0].toUpperCase());
+        for (let j = 0; j < str.length; j++) {
+            if (str[j - 1] === ' ') {
+                str = str.replace(str[j], str[j].toUpperCase());
+            }
+        }
+        return str;
+    }
+    let strAfterProcessed = processString();
+    document.write("The string before processed is: "+inputStr + "</br>");
+    document.write("The string after processed is: "+strAfterProcessed + "</br>");
+
+    function longestWord() {
+        function longestWordBefore (){
+            let arr = inputStr.split(" ");
+            let longestBeforeProcessed = arr[0];
+            for (let i = 0 ; i < arr.length; i++){
+                if (arr[i].length > longestBeforeProcessed.length){
+                    longestBeforeProcessed = arr[i];
+                }
+            }
+            document.write("The longest word before processed is: "+ '"'+ longestBeforeProcessed + '"' + "</br>");
+        }
+        longestWordBefore();
+        function longestWordAfter(){
+            let arr2 = strAfterProcessed.split(" ");
+            let  longestAfterProcessed = arr2[0];
+            for (let i =0; i < arr2.length; i++){
+                if (arr2[i].length > longestAfterProcessed.length){
+                    longestAfterProcessed = arr2[i];
+                }
+            }
+            document.write("The longest word after processed is: "+ '"'+ longestAfterProcessed + '"' + "</br>");
+        }
+        longestWordAfter()
+    }
+    longestWord();
+}
+main()
+</script>
+</body>
+</html>

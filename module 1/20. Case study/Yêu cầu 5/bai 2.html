@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhap n"));
+    let m = parseInt(prompt("Nhap m"));
+    let count = 0;
+    let arr = new Array(n);
+    let primeNum = [];
+    for (let i=0; i < arr.length; i++){
+        arr[i] = new Array(m);
+        for (let j=0 ; j < arr[i]. length; j++){
+            arr[i][j]= parseInt(prompt("Nhap phan tu array[" + i + "][" + j + "]"))
+        }
+    }
+
+    function checkPrime (num){
+        let temp = true;
+        if (num === 1){
+            temp = false;
+        }
+        for (let k = 2; k <= Math.sqrt(num); k++) {
+            if (num % k === 0) {
+                temp = false;
+            }
+        }
+        return temp;
+    }
+
+    for (let i =0 ; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (checkPrime(arr[i][j])){
+                count++;
+                primeNum.push(arr[i][j]);
+            }
+        }
+    }
+console.log("Có " + count + " số nguyên tố trong mảng ");
+console.log("Các số nguyên tố gồm " + primeNum);
+</script>
+</body>
+</html>

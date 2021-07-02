@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        var salary = parseInt(prompt("Enter your salary: "));
+    } while (isNaN(salary) || salary <= 0);
+
+    let finalSalary, tax;
+    if (salary < 7000000){
+        tax = (salary * 5) / 100
+    } else if (salary >= 15000000){
+        tax = (salary*20)/100;
+    } else {
+        tax = (salary *10) /100
+    }
+    finalSalary = salary - tax;
+    alert("Your salary after subtracting tax is " + finalSalary+ " VND")
+</script>
+</body>
+</html>

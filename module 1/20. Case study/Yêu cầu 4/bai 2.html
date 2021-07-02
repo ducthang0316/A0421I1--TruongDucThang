@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("enter a string ");
+    document.write(str + "<br>");
+    let differentChar = [];
+    let count = 0;
+    for (let i =0 ; i < str.length; i++) {
+        let check = true;
+        for (let j = i - 1 ; j >= 0; j--){
+            if (str[i] === str[j]){
+                check = false;
+                break;
+            }
+        }
+        if (check === true){
+            count++;
+            differentChar.push(str[i])
+        }
+    }
+console.log("Có " + count+ " ký tự khác nhau gồm " + differentChar)
+</script>
+</body>
+</html>

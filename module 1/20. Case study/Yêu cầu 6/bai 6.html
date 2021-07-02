@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class XoSo {
+        constructor(so1, so2, so3, so4, so5, so6) {
+            this.so1 = so1;
+            this.so2 = so2;
+            this.so3 = so3;
+            this.so4 = so4;
+            this.so5 = so5;
+            this.so6 = so6;
+        }
+    }
+    let veSo = [];
+    function muaVe() {
+        let muaVe = "</br>";
+        muaVe +=  "<button type='button' onclick='muaNgauNhien()'> Mua vé số ngẫu nhiên </button>" ;
+        muaVe+=  "<button type='button' onclick = 'muaTuChon()'> Mua vé số tự chọn </button>" + "</<br>";
+        display();
+        document.write(muaVe);
+    }
+    function muaNgauNhien() {
+        let veSoNgauNhien = [];
+        for (let i = 1; i <= 6; i++){
+          veSoNgauNhien[i] = Math.floor(Math.random()*99);
+        }
+        veSo.push(new XoSo(veSoNgauNhien[1], veSoNgauNhien[2], veSoNgauNhien[3], veSoNgauNhien[4], veSoNgauNhien[5], veSoNgauNhien[6]));
+        display();
+    }
+    function muaTuChon() {
+        let veSoTuChon = [];
+        for (let i=0; i < 6; i++){
+            veSoTuChon[i] = parseInt(prompt("Nhập cặp số thứ " + (i+1)))
+        }
+        veSo.push(new XoSo(veSoTuChon[0], veSoTuChon[1], veSoTuChon[2], veSoTuChon[3], veSoTuChon[4], veSoTuChon[5] ));
+        display()
+    }
+    function xemKetQua() {
+        let giaiDacBiet = [];
+        for (let i =0 ; i < 6; i++){
+            giaiDacBiet[i] = Math.floor(Math.random()*99)
+        }
+        giaiDacBiet = new XoSo(giaiDacBiet[0], giaiDacBiet[1], giaiDacBiet[2], giaiDacBiet[3], giaiDacBiet[4], giaiDacBiet[5]);
+        console.log(giaiDacBiet);
+        let trungGiaiNhat = false,
+            trungGiaiNhi = false,
+            trungGiaiBa = false;
+        for (let i =0 ; i < veSo.length; i++){
+
+            if (giaiDacBiet.so1 == veSo[i].so1 && giaiDacBiet.so2 == veSo[i].so2 &&giaiDacBiet.so3 == veSo[i].so3 &&giaiDacBiet.so4 == veSo[i].so4 &&giaiDacBiet.so5 == veSo[i].so5 &&giaiDacBiet.so6 == veSo[i].so6){
+                trungGiaiNhat = true;
+
+            } else if (giaiDacBiet.so2 == veSo[i].so2 &&giaiDacBiet.so3 == veSo[i].so3 &&giaiDacBiet.so4 == veSo[i].so4 &&giaiDacBiet.so5 == veSo[i].so5 &&giaiDacBiet.so6 == veSo[i].so6){
+                trungGiaiNhi = true;
+
+            } else if (giaiDacBiet.so4 == veSo[i].so4 &&giaiDacBiet.so5 == veSo[i].so5 &&giaiDacBiet.so6 == veSo[i].so6){
+                trungGiaiBa = true;
+            }
+        }
+        if (trungGiaiNhat == true){
+            alert("Chúc mừng bạn đã giành được giải nhất");
+        } else if (trungGiaiNhi == true){
+            alert("Chúc mừng bạn đã giành được giải nhì ");
+        } else if (trungGiaiBa == true){
+            alert("Chúc mừng bạn đã giành được giải ba ");
+        } else {
+            alert("Chúc bạn may mắn lần sau ")
+        }
+    }
+    function display() {
+    document.body.innerHTML = "";
+    let muaVeSo = "<h3> Xổ Số Vietlott </h3>" + "</br>";
+        muaVeSo+=  "<button type='button' onclick='muaVe()'> Mua Vé Số </button>";
+        muaVeSo+= "<button type='button' onclick='xemKetQua()'> Xem Kết Quả </button>" + "</br>";
+        muaVeSo+= "<table width='600px' border='1' style='border-collapse: collapse'>";
+        muaVeSo += "<tr >";
+        muaVeSo+= "<th colspan='6'> Vé bạn đã mua: </th>";
+        muaVeSo+= "</tr>";
+        for (let i = 0; i < veSo.length; i++){
+            muaVeSo+= "<tr>";
+            muaVeSo+= "<td width='10%' style='text-align: center'>" + veSo[i].so1 + "</td>";
+            muaVeSo+= "<td width='10%' style='text-align: center'>" + veSo[i].so2 +"</td>";
+            muaVeSo+= "<td width='10%' style='text-align: center'>" + veSo[i].so3 +"</td>";
+            muaVeSo+= "<td width='10%' style='text-align: center'>" + veSo[i].so4 +"</td>";
+            muaVeSo+= "<td width='10%' style='text-align: center'>" + veSo[i].so5 +"</td>";
+            muaVeSo+= "<td width='10%' style='text-align: center'>" + veSo[i].so6 +"</td>";
+            muaVeSo += "</tr>";
+        }
+    document.write(muaVeSo)
+    }
+display()
+</script>
+</body>
+</html>

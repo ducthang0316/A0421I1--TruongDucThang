@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        var n = parseInt(prompt("enter a number "));
+    } while (isNaN(n)|| n < 0);
+
+    let number = n.toString();
+    let newNum = number.split("");
+    let readNum = [];
+    console.log(newNum);
+    for (let i= 0; i < newNum.length; i++){
+        switch (newNum[i]) {
+            case  "0": readNum.push("không");
+                break;
+            case "1": readNum.push("một");
+                break;
+            case "2": readNum.push("hai");
+                break;
+            case "3": readNum.push("ba");
+                break;
+            case "4": readNum.push("bốn");
+                break;
+            case "5": readNum.push("năm");
+                break;
+            case "6": readNum.push("sáu");
+                break;
+            case "7": readNum.push("bảy");
+                break;
+            case "8": readNum.push("tám");
+                break;
+            case "9": readNum.push("chín");
+                break;
+        }
+    }
+    console.log(readNum.join(" "));
+
+</script>
+</body>
+</html>

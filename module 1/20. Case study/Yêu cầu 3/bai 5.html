@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let menu = "<h3> Menu </h3>";
+    menu+= "<table border='1' style='border-collapse: collapse' width='400px' height='40%'>";
+
+    menu+= "<tr>";
+    menu+= "<th width='10%'>STT</th>";
+    menu+= "<th width='10%'>Món</th>";
+    menu+= "<th width='10%'>Giá</th>";
+    menu+= "<th width='10%'>Số lượng</th>";
+    menu+= "</tr>";
+
+    menu+= "<tr>";
+    menu+= "<td >1</td>";
+    menu+= "<td >Cafe</td>";
+    menu+= "<td >10.000đ</td>";
+    menu+= "<td ><input type='text' id='SoLuong1'></td>";
+    menu+= "</tr>";
+
+    menu+= "<tr>";
+    menu+= "<td >2</td>";
+    menu+= "<td >Cam vắt</td>";
+    menu+= "<td >15.000đ</td>";
+    menu+= "<td ><input type='text' id='SoLuong2'></td>";
+    menu+= "</tr>";
+
+    menu+= "<tr>";
+    menu+= "<td >3</td>";
+    menu+= "<td >Nước ép cà rốt</td>";
+    menu+= "<td >15.000đ</td>";
+    menu+= "<td ><input type='text' id='SoLuong3'></td>";
+    menu+= "</tr>";
+
+    menu+= "<tr>";
+    menu+= "<td >4</td>";
+    menu+= "<td >Nước ép cà chua</td>";
+    menu+= "<td >15.000đ</td>";
+    menu+= "<td ><input type='text' id='SoLuong4'></td>";
+    menu+= "</tr>";
+
+    menu+= "<tr>";
+    menu+= "<td >5</td>";
+    menu+= "<td >Nước lọc</td>";
+    menu+= "<td >10.000đ</td>";
+    menu+= "<td ><input type='text' id='SoLuong5'></td>";
+    menu+= "</tr>";
+
+    menu+= "<tr>";
+    menu+= "<td >6</td>";
+    menu+= "<td >Nước dừa </td>";
+    menu+= "<td >15.000đ</td>";
+    menu+= "<td ><input type='text' id='SoLuong6'></td>";
+    menu+= "</tr>";
+
+    menu+= "</table>" + "</br>";
+    menu+= "<button type='button' onclick='tinhTien()'>Tính tiền</button>";
+    document.write(menu);
+
+    function tinhTien() {
+        let total = 0;
+        let sl1 = document.getElementById('SoLuong1').value,
+            sl2 = document.getElementById('SoLuong2').value,
+            sl3 = document.getElementById('SoLuong3').value,
+            sl4 = document.getElementById('SoLuong4').value,
+            sl5 = document.getElementById('SoLuong5').value,
+            sl6 = document.getElementById('SoLuong6').value;
+        total= (sl1* 10000) + (sl2*15000)+ (sl3*15000)+ (sl4* 15000)+ (sl5* 10000)+ (sl6*15000);
+        alert("Tổng hóa đơn của bạn là " + total)
+    }
+</script>
+</body>
+</html>

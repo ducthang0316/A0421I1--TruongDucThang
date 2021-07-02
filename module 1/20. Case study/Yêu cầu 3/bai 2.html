@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [7,2,5,3,5,3],
+        arrayB = [7,2,5,4,6,3,5,3],
+        missingValue = [];
+    for (let i = 0; i< arrayB.length; i++){
+        let check = false;
+       for (let j =0; j < arrayA.length; j++){
+           if (arrayB[i] === arrayA[j]){
+              check = true;
+               break;
+           }
+       }
+       if (!check){
+           missingValue.push(arrayB[i])
+       }
+    }
+    missingValue.sort();
+    console.log(missingValue);
+</script>
+</body>
+</html>
