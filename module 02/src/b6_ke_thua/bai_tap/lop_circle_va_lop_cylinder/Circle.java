@@ -10,6 +10,12 @@ public class Circle {
         this.radius = radius;
     }
 
+    public Circle(double radius) {
+    }
+
+    public Circle(double radius, String color, boolean filled) {
+    }
+
     public double getRadius() {
         return radius;
     }
