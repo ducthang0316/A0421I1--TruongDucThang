@@ -13,17 +13,16 @@ public class Main {
         String str = scanner.nextLine();
         String[] arrStr = str.split(" ");
         for (int i = 0; i < arrStr.length; i++) {
-            arrStr[i].toLowerCase();
             int value = 1;
-            if (!map.containsKey(arrStr[i])){
-                map.put(arrStr[i], value);
+            if (!map.containsKey(arrStr[i].toLowerCase())){
+                map.put(arrStr[i].toLowerCase(), value);
             }
             else {
-                map.replace(arrStr[i], value+= 1);
+                map.put( arrStr[i].toLowerCase(), map.get(arrStr[i].toLowerCase()) + 1);
             }
         }
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getKey() + " " + entry.getValue().intValue());
         }
     }
 }

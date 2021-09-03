@@ -1,7 +1,5 @@
 package b10_DSA_danh_sach.bai_tap.trien_khai_ArrayList;
 
-import b10_DSA_danh_sach.thuc_hanh.trien_khai_lop_list.MyList;
-
 import java.util.Arrays;
 
 public class MyArrayList<E> {
