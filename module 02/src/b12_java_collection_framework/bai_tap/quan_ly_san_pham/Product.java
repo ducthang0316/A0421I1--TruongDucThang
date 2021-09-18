@@ -1,5 +1,7 @@
 package b12_java_collection_framework.bai_tap.quan_ly_san_pham;
 
+import java.io.Serializable;
+
 public class Product {
     private int id;
     private  String nameProduct;
