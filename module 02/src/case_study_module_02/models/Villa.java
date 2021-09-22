@@ -1,6 +1,8 @@
 package case_study_module_02.models;
 
-public class Villa extends Facility{
+import java.io.Serializable;
+
+public class Villa extends Facility implements Serializable {
     private String standard;
     private double poolArea;
     private int floorNumber;
@@ -13,8 +15,16 @@ public class Villa extends Facility{
         this.floorNumber = floorNumber;
     }
 
-    public Villa(String serviceName, double usingArea, double rentCost, int maxNumberOfPeople, String rentingTypes, String standard, double poolArea, int floorNumber) {
-        super(serviceName, usingArea, rentCost, maxNumberOfPeople, rentingTypes);
+    public Villa(String serviceCode,
+                 String serviceName,
+                 double usingArea,
+                 int rentCost,
+                 int maxNumberOfPeople,
+                 String rentingTypes,
+                 String standard,
+                 double poolArea,
+                 int floorNumber) {
+        super(serviceCode, serviceName, usingArea, rentCost, maxNumberOfPeople, rentingTypes);
         this.standard = standard;
         this.poolArea = poolArea;
         this.floorNumber = floorNumber;
@@ -47,9 +57,15 @@ public class Villa extends Facility{
     @Override
     public String toString() {
         return "Villa{" +
+                "serviceCode='" + this.getServiceCode() + '\'' +
+                "serviceName='" + this.getServiceName() + '\'' +
+                ", usingArea=" + this.getUsingArea() +'\'' +
+                ", rentCost=" + this.getRentCost() +'\'' +
+                ", maxNumberOfPeople=" + this.getMaxNumberOfPeople() +'\'' +
+                ", rentingTypes='" + this.getRentingTypes() + '\'' +
                 "standard='" + standard + '\'' +
-                ", poolArea=" + poolArea +
-                ", floorNumber=" + floorNumber +
+                ", poolArea=" + poolArea +'\'' +
+                ", floorNumber=" + floorNumber +'\'' +
                 '}';
     }
 }

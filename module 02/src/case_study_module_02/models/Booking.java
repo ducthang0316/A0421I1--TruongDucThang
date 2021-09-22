@@ -1,18 +1,19 @@
 package case_study_module_02.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class Booking {
+public class Booking implements Serializable {
     private String bookingCode;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
     private String customerCode;
     private String serviceName;
     private String serviceType;
 
     public Booking(){}
 
-    public Booking(String bookingCode, Date startDate, Date endDate, String customerCode, String serviceName, String serviceType) {
+    public Booking(String bookingCode, String startDate, String endDate, String customerCode, String serviceName, String serviceType) {
         this.bookingCode = bookingCode;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -29,19 +30,19 @@ public abstract class Booking {
         this.bookingCode = bookingCode;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String  getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

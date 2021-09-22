@@ -1,9 +1,10 @@
 package case_study_module_02.models;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Employee extends Person{
+public class Employee extends Person implements Serializable {
      static {
         final int INTERMEDIATE = 1;
         final int COLLEGE = 2;
@@ -19,11 +20,11 @@ public class Employee extends Person{
     private String code;
     private String levelOfAbility;
     private String position;
-    private double salary;
+    private int salary;
 
     public Employee(){}
 
-    public Employee(String code, String levelOfAbility, String position, double salary) {
+    public Employee(String code, String levelOfAbility, String position, int salary) {
         this.code = code;
         this.levelOfAbility = levelOfAbility;
         this.position = position;
@@ -39,7 +40,7 @@ public class Employee extends Person{
                     String code,
                     String levelOfAbility,
                     String position,
-                    double salary) {
+                    int salary) {
         super(name, dateOfBirth, sex, idNumber, phoneNumber, email);
         this.code = code;
         this.levelOfAbility = levelOfAbility;
@@ -71,11 +72,11 @@ public class Employee extends Person{
         this.position = position;
     }
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 

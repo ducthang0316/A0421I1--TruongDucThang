@@ -1,6 +1,8 @@
 package case_study_module_02.models;
 
-public class House extends Facility{
+import java.io.Serializable;
+
+public class House extends Facility implements Serializable {
     private String standard;
     private int floorNumber;
 
@@ -11,8 +13,15 @@ public class House extends Facility{
         this.floorNumber = floorNumber;
     }
 
-    public House(String serviceName, double usingArea, double rentCost, int maxNumberOfPeople, String rentingTypes, String standard, int floorNumber) {
-        super(serviceName, usingArea, rentCost, maxNumberOfPeople, rentingTypes);
+    public House(String serviceCode,
+                 String serviceName,
+                 double usingArea,
+                 int rentCost,
+                 int maxNumberOfPeople,
+                 String rentingTypes,
+                 String standard,
+                 int floorNumber) {
+        super(serviceCode,serviceName, usingArea, rentCost, maxNumberOfPeople, rentingTypes);
         this.standard = standard;
         this.floorNumber = floorNumber;
     }
@@ -36,8 +45,14 @@ public class House extends Facility{
     @Override
     public String toString() {
         return "House{" +
+                "serviceCode='" + this.getServiceCode() + '\'' +
+                "serviceName='" + this.getServiceName() + '\'' +
+                ", usingArea=" + this.getUsingArea() +'\'' +
+                ", rentCost=" + this.getRentCost() +'\'' +
+                ", maxNumberOfPeople=" + this.getMaxNumberOfPeople() +'\'' +
+                ", rentingTypes='" + this.getRentingTypes() + '\'' +
                 "standard='" + standard + '\'' +
-                ", floorNumber=" + floorNumber +
+                ", floorNumber=" + floorNumber +'\'' +
                 '}';
     }
 }

@@ -1,15 +1,17 @@
 package case_study_module_02.models;
 
-public abstract class Contract {
+import java.io.Serializable;
+
+public class Contract implements Serializable {
     private int contractNumber;
     private String bookingCode;
-    private double deposit;
-    private double totalMoney;
+    private int deposit;
+    private int totalMoney;
     private String customerCode;
 
     public Contract(){}
 
-    public Contract(int contractNumber, String bookingCode, double deposit, double totalMoney, String customerCode) {
+    public Contract(int contractNumber, String bookingCode, int deposit, int totalMoney, String customerCode) {
         this.contractNumber = contractNumber;
         this.bookingCode = bookingCode;
         this.deposit = deposit;
@@ -33,19 +35,19 @@ public abstract class Contract {
         this.bookingCode = bookingCode;
     }
 
-    public double getDeposit() {
+    public int getDeposit() {
         return deposit;
     }
 
-    public void setDeposit(double deposit) {
+    public void setDeposit(int deposit) {
         this.deposit = deposit;
     }
 
-    public double getTotalMoney() {
+    public int getTotalMoney() {
         return totalMoney;
     }
 
-    public void setTotalMoney(double totalMoney) {
+    public void setTotalMoney(int totalMoney) {
         this.totalMoney = totalMoney;
     }
 

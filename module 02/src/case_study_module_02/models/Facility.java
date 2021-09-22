@@ -1,21 +1,33 @@
 package case_study_module_02.models;
 
 
-public abstract class Facility {
+import java.io.Serializable;
+
+public abstract class Facility implements Serializable {
+    private String serviceCode;
     private String serviceName;
     private double usingArea;
-    private double rentCost;
+    private int rentCost;
     private int maxNumberOfPeople;
     private String rentingTypes;
 
     public Facility(){}
 
-    public Facility(String serviceName, double usingArea, double rentCost, int maxNumberOfPeople, String rentingTypes) {
+    public Facility(String serviceCode, String serviceName, double usingArea, int rentCost, int maxNumberOfPeople, String rentingTypes) {
+        this.serviceCode = serviceCode;
         this.serviceName = serviceName;
         this.usingArea = usingArea;
         this.rentCost = rentCost;
         this.maxNumberOfPeople = maxNumberOfPeople;
         this.rentingTypes = rentingTypes;
+    }
+
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     public String getServiceName() {
@@ -34,11 +46,11 @@ public abstract class Facility {
         this.usingArea = usingArea;
     }
 
-    public double getRentCost() {
+    public int getRentCost() {
         return rentCost;
     }
 
-    public void setRentCost(double rentCost) {
+    public void setRentCost(int rentCost) {
         this.rentCost = rentCost;
     }
 
@@ -56,5 +68,17 @@ public abstract class Facility {
 
     public void setRentingTypes(String rentingTypes) {
         this.rentingTypes = rentingTypes;
+    }
+
+    @Override
+    public String toString() {
+        return "Facility{" +
+                "serviceCode='" + serviceCode + '\'' +
+                "serviceName='" + serviceName + '\'' +
+                ", usingArea=" + usingArea +'\'' +
+                ", rentCost=" + rentCost +'\'' +
+                ", maxNumberOfPeople=" + maxNumberOfPeople +'\'' +
+                ", rentingTypes='" + rentingTypes + '\'' +
+                '}';
     }
 }
