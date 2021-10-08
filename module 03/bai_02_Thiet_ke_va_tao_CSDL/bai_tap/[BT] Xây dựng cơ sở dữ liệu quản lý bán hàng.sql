@@ -1,13 +1,13 @@
 create database b02_bt_quan_ly_ban_hang;
 use b02_bt_quan_ly_ban_hang;
 CREATE TABLE Customer (
-    cID INT PRIMARY KEY,
-    cName VARCHAR(50),
-    cAge INT
+    cID INT AUTO_INCREMENT PRIMARY KEY,
+    cName VARCHAR(25),
+    cAge TINYINT
 );
 
 CREATE TABLE `Order` (
-    oID INT PRIMARY KEY,
+    oID INT AUTO_INCREMENT PRIMARY KEY,
     cID INT,
     oDate DATETIME,
     oTotalPrice INT,
@@ -16,8 +16,8 @@ CREATE TABLE `Order` (
 );
 
 CREATE TABLE Product (
-    pID INT PRIMARY KEY,
-    pName VARCHAR(50),
+    pID INT AUTO_INCREMENT PRIMARY KEY,
+    pName VARCHAR(25),
     pPrice INT
 );
 

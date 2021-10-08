@@ -31,3 +31,5 @@ CREATE TABLE Mark (
     FOREIGN KEY (SubId) REFERENCES Subject (SubId),
     FOREIGN KEY (StudentId) REFERENCES Student (StudentId)
 );
+
+
