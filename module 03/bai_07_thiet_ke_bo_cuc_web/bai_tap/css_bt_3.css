@@ -1,0 +1,132 @@
+body {
+    font-family: "Times New Roman";
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    position: fixed;
+    background-color: black;
+    color: lightgrey;
+    top: 0;
+    left: 0;
+    line-height: 2em;
+}
+
+.header li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 1em;
+    font-weight: bold;
+}
+
+.header li:first-child{
+    float: left;
+    font-size: 30px;
+}
+
+.header li:last-child{
+    font-size: 25px;
+    float: right;
+    padding-right: 30px;
+}
+
+.footer {
+    position: fixed;
+    background-color: dimgray;
+    height: 3em;
+    text-align: center;
+    color: white;
+    bottom: 0px;
+    left: 0px;
+}
+
+p{
+    text-align: justify;
+}
+
+.left{
+    background-color: lightgrey;
+    display: inline-block;
+    padding-top: 5em;
+
+}
+.left li{
+    list-style-type: none;
+    display: block;
+    padding: 2em 1em ;
+}
+.right{
+    background-color: lightgrey;
+    display: inline-block;
+    padding-top: 5em;
+
+}
+.right div{
+    box-sizing: border-box;
+    padding-top: 2em;
+
+}
+
+.content{
+    margin-top: 5em;
+    padding: 1em ;
+
+}
+/*man hinh dien thoai*/
+@media only screen and (max-width: 600px) {
+    [class*="col-"]{
+        width: 100%;
+    }
+    .row {
+        text-align: center;
+    }
+
+    .left li{
+        display: inline;
+    }
+    .head li{
+        float: left;
+        
+        padding-right: 0;
+    }
+}
+/*man hinh ipad*/
+@media only screen and (min-width: 601px){
+    .col-s-1 {width: 8.33333%;}
+    .col-s-2 {width: 16.66667%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33333%;}
+    .col-s-5 {width: 41.66667%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33333%;}
+    .col-s-8 {width: 66.66667%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33333%;}
+    .col-s-11 {width: 91.66667%;}
+    .col-s-12 {width: 100%;}
+}
+/*Màn hình pc*/
+@media only screen and (min-width: 769px) {
+    .col-1 {width: 8.33333%;}
+    .col-2 {width: 16.66667%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33333%;}
+    .col-5 {width: 41.66667%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33333%;}
+    .col-8 {width: 66.66667%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33333%;}
+    .col-11 {width: 91.66667%;}
+    .col-12 {width: 100%;}
+}
