@@ -1,18 +1,7 @@
-body {
-    font-family: "Times New Roman";
-    margin: 0;
-    padding: 0;
-}
-
-.grid{
+.head{
     width: 100%;
+    height: 50px;
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .header {
     position: fixed;
     background-color: black;
@@ -35,72 +24,85 @@ body {
 }
 
 .header li:last-child{
-    font-size: 25px;
+    font-size: 1.5em;
     float: right;
-    padding-right: 30px;
+    padding-right: 1em;
 }
-
-.footer {
-    position: fixed;
+.foot{
+    width: 100%;
+    height: 50px;
     background-color: dimgray;
-    height: 3em;
+    position: fixed;
     text-align: center;
     color: white;
     bottom: 0px;
     left: 0px;
 }
-
 p{
     text-align: justify;
 }
-
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 .left{
     background-color: lightgrey;
-    display: inline-block;
-    padding-top: 5em;
+    height: auto;
+}
+.content{
+    background-color: white;
 
 }
-.left li{
-    list-style-type: none;
-    display: block;
-    padding: 2em 1em ;
+.content div{
+    padding: 1em;
 }
 .right{
     background-color: lightgrey;
-    display: inline-block;
-    padding-top: 5em;
-
+height: auto;
 }
-.right div{
-    box-sizing: border-box;
-    padding-top: 2em;
-
+.right p {
+    text-align: center;
+    padding: 2em 3em;
 }
 
-.content{
-    margin-top: 5em;
-    padding: 1em ;
+.left li {
+    list-style-type: none;
+    padding: 2em 6em;
 
 }
-/*man hinh dien thoai*/
-@media only screen and (max-width: 600px) {
+/*Màn hình điện thoại*/
+@media only screen and (max-width: 600px){
     [class*="col-"]{
         width: 100%;
     }
-    .row {
+    .row{
         text-align: center;
-    }
 
+    }
+    .header{
+        line-height: 2em;
+    }
+    .left{
+        margin-top: 1em;
+        line-height: 3em;
+    }
     .left li{
         display: inline;
+        padding: 0em 3em;
     }
-    .head li{
+    .header li{
         float: left;
-        
-        padding-right: 0;
+        padding-right: 1em;
     }
+    .right{
+        display: flex;
+    }
+    .right p {
+      padding-left: 7em ;
+    }
+
 }
-/*man hinh ipad*/
+/*màn hinh ipad*/
 @media only screen and (min-width: 601px){
     .col-s-1 {width: 8.33333%;}
     .col-s-2 {width: 16.66667%;}
@@ -114,6 +116,8 @@ p{
     .col-s-10 {width: 83.33333%;}
     .col-s-11 {width: 91.66667%;}
     .col-s-12 {width: 100%;}
+
+
 }
 /*Màn hình pc*/
 @media only screen and (min-width: 769px) {
