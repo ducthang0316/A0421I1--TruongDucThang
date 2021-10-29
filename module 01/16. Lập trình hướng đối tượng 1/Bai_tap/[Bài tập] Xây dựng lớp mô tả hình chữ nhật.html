@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="500px" style="border: 1px solid black"></canvas>
+
+<Script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getArea() {
+            return this.width * this.height
+        };
+        getPerimeter() {
+            return (this.width + this.height) * 2
+        };
+        drawCanvas() {
+            let canvas = document.getElementById("myCanvas");
+            let draw = canvas.getContext("2d");
+            draw.beginPath();
+            draw.fillRect(10 , 10 , this.height, this.width);
+            draw.stroke()
+        }
+    }
+    let height = parseInt(prompt("Enter the height"));
+    let width = parseInt(prompt("Enter the width "));
+    let rec = new Rectangle(height, width);
+    alert(`The area of this rectangle is ${rec.getArea()}`);
+    alert("The perimeter of this rectangle is " + rec.getPerimeter());
+    rec.drawCanvas();
+</Script>
+</body>
+</html>
