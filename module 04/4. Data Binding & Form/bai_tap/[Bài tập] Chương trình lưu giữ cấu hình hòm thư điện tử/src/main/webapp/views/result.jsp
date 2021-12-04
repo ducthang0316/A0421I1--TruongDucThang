@@ -14,42 +14,32 @@
 </head>
 <body>
 <h2>Settings</h2>
-<form:form action="set" method="post" modelAttribute="result">
-    <table>
+
+    <table border="1">
         <tr>
-            <td><form:label path="language">Languages</form:label></td>
-            <td>
-                ${laguage}
-            </td>
+            <td>Languages</td>
+            <td>Page size</td>
+            <td>Spam filter</td>
+            <td>Signature</td>
         </tr>
 
-        <tr>
-            <td><form:label path="size">Page size</form:label></td>
-            <td> Show ${size} emails per page
-            </td>
-        </tr>
-
-        <tr>
-            <td><form:label path="filter">Spam filter</form:label></td>
-            <td>
-                <c:if test="${filter == true}">
-                <c:out value="Enable"></c:out>
-                </c:if>
-                <c:if test="${filter == false}">
-                    <c:out value="Disable"></c:out>
-                </c:if>
-                spams filter
-            </td>
-        </tr>
-
-        <tr>
-            <td><form:label path="signature">Signature</form:label></td>
-            <td>
-                <c:out value="${signature}"></c:out>
-            </td>
-        </tr>
+        <c:forEach items="${result}" var="set">
+            <tr>
+                <td>${set.language}</td>
+                <td>${set.size}</td>
+                <td>
+                    <c:if test="${set.filter == true}">
+                        <c:out value="Enable"></c:out>
+                    </c:if>
+                    <c:if test="${set.filter == false}">
+                        <c:out value="Disable"></c:out>
+                    </c:if>
+                </td>
+                <td>${set.signature}</td>
+            </tr>
+        </c:forEach>
 
     </table>
-</form:form>
+
 </body>
 </html>

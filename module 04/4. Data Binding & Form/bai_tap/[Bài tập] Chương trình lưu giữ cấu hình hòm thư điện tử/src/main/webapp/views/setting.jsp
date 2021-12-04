@@ -13,12 +13,12 @@
 </head>
 <body>
 <h2>Settings</h2>
-<form:form action="set" method="post" modelAttribute="setting">
+<form:form action="/set" method="post" modelAttribute="setting">
     <table>
         <tr>
-            <td><form:label path="language">Languages</form:label></td>
+            <th><form:label path="language">Languages</form:label></th>
             <td>
-                <form:select path="languge">
+                <form:select path="language">
                     <form:option value="English">English</form:option>
                     <form:option value="Vietnamese">Vietnamese</form:option>
                     <form:option value="Japanese">Japanese</form:option>
@@ -28,7 +28,7 @@
         </tr>
 
         <tr>
-            <td><form:label path="size">Page size</form:label></td>
+            <th><form:label path="size">Page size</form:label></th>
             <td> Show <form:select path="size">
                     <form:option value="5">5</form:option>
                     <form:option value="10">10</form:option>
@@ -41,20 +41,20 @@
         </tr>
 
         <tr>
-            <td><form:label path="filter">Spam filter</form:label></td>
+            <th><form:label path="filter">Spam filter</form:label></th>
             <td><form:checkbox path="filter"/> Enable spams filter </td>
         </tr>
 
         <tr>
-            <td><form:label path="signature">Signature</form:label></td>
+            <th><form:label path="signature">Signature</form:label></th>
             <td><form:textarea path="signature"/></td>
         </tr>
 
         <tr>
             <td></td>
             <td>
+                <input type="reset" value="Cancel">
                 <input type="submit" value="Update">
-<%--                <input type="submit" value="Cancel">--%>
             </td>
         </tr>
     </table>

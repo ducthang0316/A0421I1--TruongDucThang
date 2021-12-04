@@ -47,4 +47,5 @@ public class Setting {
     public void setSignature(String signature) {
         this.signature = signature;
     }
+
 }
