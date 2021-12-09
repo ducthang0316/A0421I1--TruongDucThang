@@ -159,6 +159,8 @@ VALUES
 (9,4,'Ngo Duc Lam','1991-11-02',1 , '12341234','0984769769','mail@gmail.com','Quang Nam'),
 (10,5,'Le Gia Han','1990-12-01',0 , '12341234','0984769769','mail@gmail.com','Ha Noi');
 
+select * from customer;
+
 
 INSERT INTO service
 VALUES
@@ -166,26 +168,64 @@ VALUES
 (2,'thuê house', 200, 7,4000000, 2, 2,'high', 'none', 70, 3),
 (3,'thuê room', 100, 4,3000000, 3, 3,'high', 'none', 30, 2);
 
+select * from service;
+
 INSERT INTO employee
 VALUES
-(1,'Nguyen Thanh Nam',5,2,1,'1990-02-12','12341234',50000000,'0984769769','mail@gmail.com','Đà Nẵng'),
-(2,'Nguyen Van Hai',2,1,2,'1991-11-12',12341234,5000000,0984769769,'mail@gmail.com','Đà Nẵng'),
-(3,'Nguyen Ngoc Hanh',6,2,3,'1992-12-13',12341234,5000000,0984769769,'mail@gmail.com','Quảng Nam'),
-(4,'Ly Thi Ha',2,3,4,'1993-01-12',12341234,10000000,0984769769,'mail@gmail.com','Đà Nẵng'),
-(5,'Truong Van Hoa',3,3,1,'1994-02-09',12341234,10000000,0984769769,'mail@gmail.com','HCM'),
-(6,'Trinh Van Khanh',1,1,2,'1995-02-17',12341234,20000000,0984769769,'mail@gmail.com','Hà Nội'),
-(7,'Le Hong Ngoc',2,2,1,'1996-03-12',12341234,20000000,0984769769,'mail@gmail.com','Hai Phòng'),
-(8,'Ly Duc Thinh',4,4,3,'1997-04-12',12341234,50000000,0984769769,'mail@gmail.com','Đà Nẵng'),
-(9,'Hoang Duc Man',6,3,1,'1998-05-18',12341234,30000000,0984769769,'mail@gmail.com','Đà Nẵng'),
-(10,'Vo My Hang',4,4,1,'1999-06-12',12341234,40000000,0984769769,'mail@gmail.com','Quảng Nam');
+(1,'Nguyen Thanh Nam',5,2,1,'1990-02-12','12341234',50000000,'0984769769','nam@gmail.com','Đa Nang','thanhnam'),
+(2,'Nguyen Van Hai',2,1,2,'1991-11-12',12341234,5000000,0984769769,'hai@gmail.com','Đa Nang', 'vanhai'),
+(3,'Nguyen Ngoc Hanh',6,2,3,'1992-12-13',12341234,5000000,0984769769,'hanh@gmail.com','Quang Nam', 'ngochanh'),
+(4,'Ly Thi Ha',2,3,4,'1993-01-12',12341234,10000000,0984769769,'ha@gmail.com','Đa Nang', 'thiha'),
+(5,'Truong Van Hoa',3,3,1,'1994-02-09',12341234,10000000,0984769769,'hoa@gmail.com','HCM','vanhoa'),
+(6,'Trinh Van Khanh',1,1,2,'1995-02-17',12341234,20000000,0984769769,'khanh@gmail.com','Ha Noi', 'vankhanh'),
+(7,'Le Hong Ngoc',2,2,1,'1996-03-12',12341234,20000000,0984769769,'ngoc@gmail.com','Hai Phong', 'hongngoc'),
+(8,'Ly Duc Thinh',4,4,3,'1997-04-12',12341234,50000000,0984769769,'thinh@gmail.com','Đa Nang', 'ducthinh'),
+(9,'Hoang Duc Man',6,3,1,'1998-05-18',12341234,30000000,0984769769,'man@gmail.com','Đa Nang', 'ducman'),
+(10,'Vo My Hang',4,4,1,'1999-06-12',12341234,40000000,0984769769,'hang@gmail.com','Quang Nam', 'myhang');
+
+select * from employee;
+
+insert into `user` 
+values
+('thanhnam', '12345'),
+('vanhai', '12345'),
+('ngochanh', '12345'),
+('thiha', '12345'),
+('vanhoa', '12345'),
+('vankhanh', '12345'),
+('hongngoc', '12345'),
+('ducthinh', '12345'),
+('ducman', '12345'),
+('myhang', '12345');
+
+insert into `role`
+values
+(1, 'supervising'),
+(2, 'operating'),
+(3, 'managing'),
+(4, 'supporting'),
+(5, 'searching');
+
+insert into user_role
+values 
+(5 , 'thanhnam'),
+(4 , 'vanhai'),
+(3 , 'ngochanh'),
+(2 , 'thiha'),
+(1 , 'vanhoa'),
+(2 , 'vankhanh'),
+(3 , 'hongngoc'),
+(4 , 'ducthinh'),
+(5 , 'ducman'),
+(1 , 'myhang');
 
 INSERT INTO contract
 VALUES
-(1, 1, 1, 1, '2020-12-12', '2021-12-30', 3000000, 5000000),
-(2, 3, 2, 2, '2019-02-13','2019-03-20', 400000, 6000000),
-(3, 1, 3, 3, '2018-03-14','2018-04-20', 500000, 7000000),
-(4, 3, 4, 1, '2021-04-15','2021-05-20', 500000, 8000000),
-(5, 1, 5, 3, '2020-05-16','2021-06-22', 6000000, 90000000);
+(1,  1, 1, 3,'2020-12-12', '2021-12-30', 600000, 5000000),
+(2,  2, 2, 2,'2019-02-13','2019-03-20', 700000, 6000000),
+(3 , 3, 3, 3, '2018-03-14','2018-04-20', 800000, 7000000),
+(4 , 4, 4, 1, '2021-04-15','2021-05-20', 1000000, 8000000),
+(5 , 5, 5, 1, '2020-05-16','2021-06-22', 1500000, 90000000);
 
 INSERT INTO contract_detail
 VALUES
@@ -195,6 +235,33 @@ VALUES
 (4,4,2,2),
 (5,5,1,3);
 
-
+DELIMITER $$
+create procedure edit_customer_by_id( in 
+	up_id INT,
+    up_type_id INT,
+    up_name VARCHAR(45),
+    up_birthday DATE,
+    up_gender bit(1),
+    up_id_card VARCHAR(45),
+    up_phone VARCHAR(45),
+    up_email VARCHAR(45),
+    up_address VARCHAR(45))
+    begin
+    update customer
+    set customer_type_id = up_type_id,
+    customer_name = up_name,
+    customer_birthday = up_birthday,
+    customer_gender = up_gender,
+    customer_id_card = up_id_card,
+    customer_phone = up_phone,
+    customer_email = up_email,
+    customer_address = up_address
+    where customer_id = up_id;
+    end $$
+    DELIMITER ;
+    
+    select * from customer where customer_id = 1;
+    
+    select * from customer where customer_name like "%%" and customer_address like "%%" and customer_type_id like "%%";
 
 

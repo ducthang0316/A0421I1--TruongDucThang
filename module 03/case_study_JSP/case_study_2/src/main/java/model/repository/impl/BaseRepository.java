@@ -12,9 +12,10 @@ public class BaseRepository {
 
         Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
            try{
                connection = DriverManager.getConnection(URL, USER, PASSWORD);
+
                return connection;
            } catch (SQLException e) {
                // TODO Auto-generated catch block
