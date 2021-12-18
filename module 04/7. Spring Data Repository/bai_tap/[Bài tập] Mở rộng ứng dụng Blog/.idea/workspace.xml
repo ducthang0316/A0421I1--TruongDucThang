@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="948a76a8-a13d-4ce4-8ef2-32db980f6db4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/repository/IGeneralRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/java/com/codegym/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/webapp/WEB-INF/views/blog/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/webapp/WEB-INF/views/blog/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/webapp/WEB-INF/views/blog/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/webapp/WEB-INF/views/blog/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/webapp/WEB-INF/views/blog/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/bai_tap/[Bài tập] Tạo ứng dụng Blog/src/main/webapp/WEB-INF/views/eror404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/java/com/codegym/cms/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Sử dụng Spring JPA Store Proceduce/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/repository/IGeneralRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/java/com/codegym/cms/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/webapp/WEB-INF/views/customer/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/webapp/WEB-INF/views/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6. JPA/thuc_hanh/[Thực hành] Ứng dụng quản lý khách hàng/src/main/webapp/WEB-INF/views/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/java/com/example/bt_bai_7/service/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mo rong ung dung Blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/java/com/codegym/cms/controller/ProvinceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/java/com/codegym/cms/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/java/com/codegym/cms/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/java/com/codegym/cms/repository/IProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/java/com/codegym/cms/service/IProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/java/com/codegym/cms/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/webapp/WEB-INF/views/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/webapp/WEB-INF/views/province/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/webapp/WEB-INF/views/province/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/webapp/WEB-INF/views/province/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/webapp/WEB-INF/views/province/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/[Thực hành] Ứng dụng Quản lý khách hàng Quản lý tỉnh/src/main/webapp/WEB-INF/views/province/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/view.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="22Sf4LgMdk44dO4p1YtuBWlYE7g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="948a76a8-a13d-4ce4-8ef2-32db980f6db4" name="Default Changelist" comment="" />
+      <created>1639835717287</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639835717287</updated>
+      <workItem from="1639835727792" duration="2503000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1639836441917">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1639836441917" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1639836257544">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1639836257544" />
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1639836373062">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1639836373062" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1639836771865">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1639836771865" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1639843173181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1639843173181" />
+    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1639843173180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1639843173180" />
+    <state x="209" y="73" key="new project wizard" timestamp="1639836775125">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1639836775125" />
+  </component>
+</project>
