@@ -1,6 +1,7 @@
 package com.example.bt_bai_7.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Blog {
@@ -16,6 +17,16 @@ public class Blog {
 
     @ManyToOne(targetEntity = Category.class)
     private Category category;
+
+    private String time;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     public Blog() {
     }

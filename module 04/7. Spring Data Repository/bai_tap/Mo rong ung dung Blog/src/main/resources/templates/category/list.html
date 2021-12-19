@@ -9,25 +9,34 @@
 </head>
 <body>
 
+<h1>Category</h1>
+
+<div style="color: red">
+    <th:block th:if="${message}">
+        <h5 th:text="${message}"></h5>
+    </th:block>
+</div>
+
+<a th:href="@{/category/create}">Create new category</a>
+
 <table class="table">
     <thead class="thead-light">
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">Author</th>
-        <th scope="col">Content</th>
-        <th scope="col">Category</th>
+        <th scope="col">Category Name</th>
+        <th scope="col" colspan="2"> </th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="blog: ${blogs}">
-        <td scope="row" th:text="${blog.id}"></td>
-        <td scope="row" th:text="${blog.title}"></td>
-        <td scope="row" th:text="${blog.author}"></td>
-        <td scope="row" th:text="${blog.content}"></td>
-        <td scope="row" th:text="${blog.category.name}"></td>
+    <tr th:each="category: ${categories}">
+        <td scope="row" th:text="${category.id}"></td>
+        <td scope="row" th:text="${category.name}"></td>
+
+        <td scope="row"><a th:href="@{/category/__${category.id}__/edit}">Edit</a></td>
+        <td scope="row"><a th:href="@{/category/__${category.id}__/delete }">Delete</a></td>
     </tr>
     </tbody>
 </table>
+
 </body>
 </html>
