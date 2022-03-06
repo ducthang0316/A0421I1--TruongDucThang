@@ -1,0 +1,113 @@
+<h3>Register form</h3>
+<!--<form #registerForm = "ngForm" (ngSubmit)="createUser(registerForm)">-->
+<!--  <label>ID</label>-->
+<!--  <input type="text" ngModel name="id" required ><br>-->
+<!--  <label>Email</label>-->
+<!--  <input type="email" ngModel name="email"><br>-->
+<!--  <label>Password</label>-->
+<!--  <input type="password" ngModel name="password"><br>-->
+<!--  <label> Confirm Password</label>-->
+<!--  <input type="password" ngModel name="confirmPassword"><br>-->
+<!--  <label>Country</label>-->
+<!--  <select name="country" ngModel>-->
+<!--    <option value="vn">Viet Nam</option>-->
+<!--    <option value="us">USA</option>-->
+<!--    <option value="cn">China</option>-->
+<!--  </select><br>-->
+<!--  <label> Gender</label>-->
+<!--  <input type="radio" name="gender" value="male">Male-->
+<!--  <input type="radio" name="gender" value="female">Female-->
+<!--  <br>-->
+<!--  <label> Phone </label>-->
+<!--  <input type="text" ngModel name="phone"><br>-->
+
+<!--  <button type="submit" >Creat</button>-->
+<!--&lt;!&ndash;  (click)="createUser()"&ndash;&gt;-->
+<!--</form>-->
+
+<form [formGroup]="registerForm" (ngSubmit)="createUser()">
+
+  <label>ID</label>
+    <input type="text" formControlName="id" ><br>
+    <div style="color: red" *ngIf="registerForm.controls.id.hasError('required') && registerForm.get('id').touched">
+      Id must not null
+    </div>
+
+    <label>Email</label>
+    <input type="email" formControlName="email"><br>
+    <div style="color: red" *ngIf="(registerForm.controls.email.hasError('required') )
+          && registerForm.get('email').touched">
+        Email must not null
+    </div>
+    <div style="color: red" *ngIf="(registerForm.controls.email.hasError('email') )
+          && registerForm.get('email').touched">
+        Email is in wrong format
+    </div>
+
+    <label>Password</label>
+    <input type="password" formControlName="password"><br>
+    <div style="color: red" *ngIf="(registerForm.controls.password.hasError('required') )
+            && registerForm.get('password').touched">
+      Password must not null
+    </div>
+    <div style="color: red" *ngIf="(registerForm.controls.password.hasError('minlength') )
+              && registerForm.get('password').touched">
+      Password must at least 6 characters
+    </div>
+
+    <label> Confirm Password</label>
+    <input type="password" formControlName="confPassword"><br>
+    <div style="color: red" *ngIf="(registerForm.controls.confPassword.hasError('required') )
+              && registerForm.get('confPassword').touched">
+      Password must not null
+    </div>
+    <div style="color: red" *ngIf="(registerForm.controls.confPassword.hasError('minlength') )
+                && registerForm.get('confPassword').touched">
+      Password must at least 6 characters
+    </div>
+
+    <label>Country</label>
+    <select formControlName="country">
+      <option value="vn">Viet Nam</option>
+      <option value="us">USA</option>
+      <option value="cn">China</option>
+    </select><br>
+    <div style="color: red" *ngIf="(registerForm.controls.country.hasError('required') )
+                && registerForm.get('country').touched">
+      Country must not null
+    </div>
+
+    <label> Gender</label>
+    <input type="radio" formControlName="gender" value="male">Male
+    <input type="radio" formControlName="gender" value="female">Female
+    <br>
+    <div style="color: red" *ngIf="(registerForm.controls.gender.hasError('required') )
+                  && registerForm.get('gender').touched">
+      Gender must not null
+    </div>
+
+
+    <label> Age </label>
+    <input type="number" formControlName="age"><br>
+    <div style="color: red" *ngIf="(registerForm.controls.age.hasError('required') )
+                && registerForm.get('age').touched">
+      age must not null
+    </div>
+    <div style="color: red" *ngIf="(registerForm.controls.age.hasError('min') )
+                  && registerForm.get('age').touched">
+      age must at least 18
+    </div>
+
+    <label> Phone </label>
+    <input type="text" formControlName="phone"><br>
+    <div style="color: red" *ngIf="(registerForm.controls.phone.hasError('required') )
+            && registerForm.get('phone').touched">
+      phone must not null
+    </div>
+    <div style="color: red" *ngIf="(registerForm.controls.phone.hasError('pattern') )
+            && registerForm.get('phone').touched">
+      phone is in wrong format
+    </div>
+
+    <button type="submit" >Creat</button>
+</form>
