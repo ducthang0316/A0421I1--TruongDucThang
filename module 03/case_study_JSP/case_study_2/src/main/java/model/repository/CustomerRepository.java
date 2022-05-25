@@ -3,18 +3,17 @@ package model.repository;
 import model.bean.Customer;
 
 import java.util.List;
-import java.util.Map;
 
 public interface CustomerRepository {
     List<Customer> findAll();
 
+    boolean save(Customer customer);
+
     Customer findById(int id);
 
-    boolean save(Customer customer);
+    boolean update(Customer customer, int id);
 
     boolean delete(int id);
 
-    boolean update(int id, Customer customer);
-
-    List<Customer> search(String name, String address, String type);
+    List<Customer> search(String customer_name, String customer_address);
 }

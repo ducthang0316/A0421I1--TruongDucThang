@@ -1,90 +1,132 @@
 package model.bean;
 
 public class Contract {
-    private int id;
-    private String startDate;
-    private String endDate;
-    private double deposit;
-    private double total;
-    private int employeeID;
-    private int customerID;
-    private int serviceID;
+    private int contract_id;
+    private String contract_start_date;
+    private String contract_end_date;
+    private double contract_deposit;
+    private double contract_total_money;
+    private int employee_id;
+    private int customer_id;
+    private int service_id;
+    private Service service;
+    private Customer customer;
+    private Employee employee;
 
     public Contract() {
     }
 
-    public Contract(int id, String startDate, String endDate, double deposit, double total, int employeeID, int customerID, int serviceID) {
-        this.id = id;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.deposit = deposit;
-        this.total = total;
-        this.employeeID = employeeID;
-        this.customerID = customerID;
-        this.serviceID = serviceID;
+    public Contract(int contract_id, String contract_start_date, String contract_end_date, double contract_deposit,
+                    double contract_total_money, int employee_id, int customer_id, int service_id, Service service, Customer customer, Employee employee) {
+        this.contract_id = contract_id;
+        this.contract_start_date = contract_start_date;
+        this.contract_end_date = contract_end_date;
+        this.contract_deposit = contract_deposit;
+        this.contract_total_money = contract_total_money;
+        this.employee_id = employee_id;
+        this.customer_id = customer_id;
+        this.service_id = service_id;
+        this.service = service;
+        this.customer = customer;
+        this.employee = employee;
     }
 
-    public int getId() {
-        return id;
+    public Contract(int contract_id, String contract_start_date, String contract_end_date, double contract_deposit, double contract_total_money, int employee_id, int customer_id, int service_id) {
+        this.contract_id = contract_id;
+        this.contract_start_date = contract_start_date;
+        this.contract_end_date = contract_end_date;
+        this.contract_deposit = contract_deposit;
+        this.contract_total_money = contract_total_money;
+        this.employee_id = employee_id;
+        this.customer_id = customer_id;
+        this.service_id = service_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getContract_id() {
+        return contract_id;
     }
 
-    public String getStartDate() {
-        return startDate;
+    public void setContract_id(int contract_id) {
+        this.contract_id = contract_id;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    public String getContract_start_date() {
+        return contract_start_date;
     }
 
-    public String getEndDate() {
-        return endDate;
+    public void setContract_start_date(String contract_start_date) {
+        this.contract_start_date = contract_start_date;
     }
 
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    public String getContract_end_date() {
+        return contract_end_date;
     }
 
-    public double getDeposit() {
-        return deposit;
+    public void setContract_end_date(String contract_end_date) {
+        this.contract_end_date = contract_end_date;
     }
 
-    public void setDeposit(double deposit) {
-        this.deposit = deposit;
+    public double getContract_deposit() {
+        return contract_deposit;
     }
 
-    public double getTotal() {
-        return total;
+    public void setContract_deposit(double contract_deposit) {
+        this.contract_deposit = contract_deposit;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
+    public double getContract_total_money() {
+        return contract_total_money;
     }
 
-    public int getEmployeeID() {
-        return employeeID;
+    public void setContract_total_money(double contract_total_money) {
+        this.contract_total_money = contract_total_money;
     }
 
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
+    public int getEmployee_id() {
+        return employee_id;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    public void setEmployee_id(int employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public int getCustomer_id() {
+        return customer_id;
     }
 
-    public int getServiceID() {
-        return serviceID;
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = customer_id;
     }
 
-    public void setServiceID(int serviceID) {
-        this.serviceID = serviceID;
+    public int getService_id() {
+        return service_id;
+    }
+
+    public void setService_id(int service_id) {
+        this.service_id = service_id;
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public void setService(Service service) {
+        this.service = service;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 }

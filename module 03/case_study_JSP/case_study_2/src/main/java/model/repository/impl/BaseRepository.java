@@ -5,24 +5,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseRepository {
-   public Connection connectDataBase(){
-        final String URL ="jdbc:mysql://localhost:3306/case_study_2?useSSL=false";
+    public Connection connectDatabase(){
+        final String URL = "jdbc:mysql://localhost:3306/furama?useSSL=false";
         final String USER = "root";
-        final String PASSWORD = "12345";
-
+        final String PASSWORD = "123456";
         Connection connection = null;
-        try {
+        try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-           try{
-               connection = DriverManager.getConnection(URL, USER, PASSWORD);
-
-               return connection;
-           } catch (SQLException e) {
-               // TODO Auto-generated catch block
-               e.printStackTrace();
-           }
-        }catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
+            try {
+                connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                return connection;
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
+        }catch (ClassNotFoundException e){
             e.printStackTrace();
         }
         return null;

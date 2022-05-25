@@ -5,19 +5,77 @@ import model.repository.CustomerRepository;
 import model.repository.impl.CustomerRepositoryImpl;
 import model.service.CustomerService;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class CustomerServiceImpl implements CustomerService {
     CustomerRepository customerRepository = new CustomerRepositoryImpl();
-    private final String EMAIL_REGEX ="^[a-z][a-z0-9_\\.]{5,32}@[a-z0-9]{2,}(\\.[a-z0-9]{2,4}){1,2}$";
-    private final String REGEX_DATE = "^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$";
-    private final String REGEX_PHONE = "^(090\\d{7}|091\\d{7}|\\(84\\)\\+90\\d{7}|\\(84\\)\\+91\\d{7})$";
-    private final String REGEX_ID_CARD = "^(\\d{9}|\\d{12})$";
+    private final String ID_CARD_REGEX = "^[0-9]{9}$";
+    private final String PHONE_NUMBER_REGEX = "^(\\+84|0[35789])+([0-9]{8,9})$";
+    private final String EMAIL_REGEX = "^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$";
+
     @Override
     public List<Customer> findAll() {
         return customerRepository.findAll();
+    }
+
+    @Override
+    public Map<String, String> save(Customer customer) {
+        Map<String, String> messageMap = new HashMap<>();
+        boolean check = true;
+
+        //name validate
+        if (customer.getCustomer_name().equals("")){
+            check = false;
+            messageMap.put("nameMessage", "Name can not be empty!");
+        }
+        try {
+            check = false;
+            Integer.parseInt(customer.getCustomer_name());
+            messageMap.put("nameMessage", "Your name is like a number!");
+        }catch (NumberFormatException e){
+            check = true;
+        }
+
+        //birthday validate
+        if (customer.getCustomer_birthday().equals("")){
+            check = false;
+            messageMap.put("birthdayMessage", "Birthday can not be empty!");
+        }
+
+        //id card validate
+        if (customer.getCustomer_id_card().equals("")){
+            check = false;
+            messageMap.put("idCardMessage", "Id card can not be empty!");
+        }else if (!validateIdCard(customer.getCustomer_id_card())){
+            check = false;
+            messageMap.put("idCardMessage", "This is not an id card!");
+        }
+
+        //phone number validate
+        if (customer.getCustomer_phone().equals("")){
+            check = false;
+            messageMap.put("phoneMessage", "Phone number can not be empty");
+        }else if (!validatePhoneNumber(customer.getCustomer_phone())){
+            check = false;
+            messageMap.put("phoneMessage", "This is not a phone number");
+        }
+
+        //email validate
+        if (customer.getCustomer_email().equals("")){
+            check = false;
+            messageMap.put("emailMessage", "Email can not be empty!");
+        }else if (!validateEmail(customer.getCustomer_email())){
+            check = false;
+            messageMap.put("emailMessage", "This is not an email!");
+        }
+
+        if (check){
+            customerRepository.save(customer);
+        }
+        return messageMap;
     }
 
     @Override
@@ -26,76 +84,30 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean save(Customer customer) {
-        return customerRepository.save(customer);
+    public boolean update(Customer customer, int id) {
+        return customerRepository.update(customer, id);
     }
-
 
     @Override
     public boolean delete(int id) {
-        return  customerRepository.delete(id);
+        return customerRepository.delete(id);
     }
 
     @Override
-    public boolean update(int id, Customer customer) {
-        return  customerRepository.update(id, customer);
+    public List<Customer> search(String customer_name, String customer_address) {
+        return customerRepository.search(customer_name, customer_address);
     }
 
-    @Override
-    public List<Customer> search(String name, String address, String type) {
-        return customerRepository.search(name, address, type);
+    //validate data
+    public boolean validateIdCard(String idCard){
+        return idCard.matches(ID_CARD_REGEX);
     }
 
-    @Override
-    public Map<String, String> saveWithValidate(Customer customer) {
-        Map<String, String> map = new HashMap<>();
-        boolean check = true;
-        if ("".equals(customer.getEmail())){
-            check= false;
-            map.put("emailMess" , "Email must not null");
-        } else if (!validateEmail(customer.getEmail())){
-            check = false;
-            map.put("emailMess", "Email is wrong format");
-            //validate birthday
-        } else if ("".equals(customer.getBirthday())){
-            check= false;
-            map.put("birthdayMess" , "Birthday must not null");
-        } else if (!validateDate(customer.getBirthday())){
-            check= false;
-            map.put("birthdayMess" , "Birthday is wrong format");
-            //validate phone
-        } else if ("".equals(customer.getPhone())){
-            check= false;
-            map.put("phoneMess" , "phone must not null");
-        } else if (!validatePhone(customer.getPhone())){
-            check= false;
-            map.put("phoneMess" , "phone is wrong format");
-             //validate phone
-        } else if ("".equals(customer.getIdCard())){
-            check= false;
-            map.put("idCardMess" , "idCard must not null");
-        } else if (!validateIdCard(customer.getIdCard())){
-            check= false;
-            map.put("idCardMess" , "idCard is wrong format");
-        }
-
-        if (check){
-            customerRepository.save(customer);
-        }
-        return map;
+    public boolean validatePhoneNumber(String phoneNumber){
+        return phoneNumber.matches(PHONE_NUMBER_REGEX);
     }
 
-    // validate data
-    public  boolean validateEmail(String email){
+    public boolean validateEmail(String email){
         return email.matches(EMAIL_REGEX);
-    }
-    public  boolean validateDate(String date){
-        return date.matches(REGEX_DATE);
-    }
-    public  boolean validatePhone(String phone){
-        return phone.matches(REGEX_PHONE);
-    }
-    public  boolean validateIdCard(String idCard){
-        return idCard.matches(REGEX_ID_CARD);
     }
 }

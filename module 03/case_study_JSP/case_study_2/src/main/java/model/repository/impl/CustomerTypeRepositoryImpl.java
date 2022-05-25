@@ -1,8 +1,8 @@
 package model.repository.impl;
 
 import model.bean.CustomerType;
+import model.bean.Position;
 import model.repository.CustomerTypeRepository;
-import model.service.CustomerTypeService;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,27 +12,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerTypeRepositoryImpl implements CustomerTypeRepository {
-    private BaseRepository baseRepository = new BaseRepository();
-    private final String SELECT_ALL_TYPE = "select * from customer_type;";
+    BaseRepository baseRepository = new BaseRepository();
+    private final String SELECT_ALL_CUSTOMER_TYPE = "SELECT * FROM customer_type;";
     @Override
     public List<CustomerType> findAll() {
-        List<CustomerType> typeList = new ArrayList<>();
+        List<CustomerType> customerTypeList = new ArrayList<>();
         Connection connection = null;
-        connection = baseRepository.connectDataBase();
-
+        connection = baseRepository.connectDatabase();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_TYPE);
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_CUSTOMER_TYPE);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
-                int id = resultSet.getInt("customer_type_id");
-                String typeName = resultSet.getString("customer_type_name");
-                typeList.add(new CustomerType(id, typeName));
+            while (resultSet.next()) {
+                int customer_type_id = resultSet.getInt("customer_type_id");
+                String customer_type_name = resultSet.getString("customer_type_name");
+                CustomerType customerType = new CustomerType(customer_type_id, customer_type_name);
+                customerTypeList.add(customerType);
+
             }
             preparedStatement.close();
             connection.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return typeList;
+        return customerTypeList;
     }
 }

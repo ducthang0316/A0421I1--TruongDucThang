@@ -2,14 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d5c163-60e6-4d07-9901-ac1c4a23a9b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/build/libs/customer-list-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_10_JSP_va_JSTL/bai_tap/Hiển thị danh sách khách hàng/build/libs/customer-list-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/EducationDegree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/ServiceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/java/com/example/demo/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 04/Casestudy/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/classes/com/codegym/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.54/webapps/ROOT/WEB-INF/views/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/10. Session &amp; Cookie trong Spring/thuc_hanh/[Thực hành] Thêm sản phẩm vào giỏ hàng/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/10. Session &amp; Cookie trong Spring/thuc_hanh/[Thực hành] Thêm sản phẩm vào giỏ hàng/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/11. Web Service và RESTful/thuc_hanh/[Thực hành] Quản lý khách hàng sử dụng RESTful/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/11. Web Service và RESTful/thuc_hanh/[Thực hành] Quản lý khách hàng sử dụng RESTful/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/configuration/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/configuration/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/configuration/AppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/controller/SmartphoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/controller/SmartphoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/model/Smartphone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/model/Smartphone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/repository/ISmartphoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/service/ISmartphoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/service/ISmartphoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/service/SmartphoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/java/com/codegym/service/SmartphoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/webapp/WEB-INF/views/phones/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Quản lý điện thoại/src/main/webapp/WEB-INF/views/phones/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Sử dụng jQuery tạo hiệu ứng/use_jquery.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Sử dụng jQuery tạo hiệu ứng/use_jquery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Sử dụng jQuery tạo hiệu ứng/use_jquery_animated.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/12. jQuery &amp; AJAX/thuc_hanh/[Thực hành] Sử dụng jQuery tạo hiệu ứng/use_jquery_animated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/9. AOP &amp; Exception Handling/thuc_hanh/[Thực hành] Bổ sung aspect log cho ứng dụng quản lý danh sách khách hàng" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/9. AOP &amp; Exception Handling/thuc_hanh/[Thực hành] Bổ sung aspect log cho ứng dụng quản lý danh sách khách hàng" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 04/9. AOP &amp; Exception Handling/thuc_hanh/[Thực hành] Sử dụng ExceptionHandler để xử lý ngoại lệ cho ứng dụng Quản lý Khách hàng" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 04/9. AOP &amp; Exception Handling/thuc_hanh/[Thực hành] Sử dụng ExceptionHandler để xử lý ngoại lệ cho ứng dụng Quản lý Khách hàng" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case_study_2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SvnConfiguration">
@@ -45,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636974941602</updated>
       <workItem from="1636974942965" duration="60000" />
+      <workItem from="1642384980825" duration="84000" />
     </task>
     <servers />
   </component>

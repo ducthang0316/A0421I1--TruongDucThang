@@ -1,113 +1,149 @@
 package model.bean;
 
-import java.util.Date;
-
 public class Customer {
-    private int id;
-    protected int customerType;
-    private String name;
-    private String birthday;
-    private int gender;
-    private String idCard;
-    private String phone;
-    private String email;
-    private String address;
+    private int customer_id;
+    private int customer_type_id;
+    private String customer_name;
+    private String customer_birthday;
+    private int customer_gender;
+    private String customer_id_card;
+    private String customer_phone;
+    private String customer_email;
+    private String customer_address;
+    private Service service;
+    private AttachService attachService;
 
     public Customer() {
     }
 
-    public Customer(int customerType, String name, String birthday, int gender, String idCard, String phone, String email, String address) {
-        this.customerType = customerType;
-        this.name = name;
-        this.birthday = birthday;
-        this.gender = gender;
-        this.idCard = idCard;
-        this.phone = phone;
-        this.email = email;
-        this.address = address;
+    public Customer(int customer_id, int customer_type_id, String customer_name, String customer_birthday, int customer_gender, String customer_id_card, String customer_phone, String customer_email, String customer_address) {
+        this.customer_id = customer_id;
+        this.customer_type_id = customer_type_id;
+        this.customer_name = customer_name;
+        this.customer_birthday = customer_birthday;
+        this.customer_gender = customer_gender;
+        this.customer_id_card = customer_id_card;
+        this.customer_phone = customer_phone;
+        this.customer_email = customer_email;
+        this.customer_address = customer_address;
     }
 
-    public Customer(int id, int customerType, String name, String birthday, int gender, String idCard, String phone, String email, String address) {
-        this.id = id;
-        this.customerType = customerType;
-        this.name = name;
-        this.birthday = birthday;
-        this.gender = gender;
-        this.idCard = idCard;
-        this.phone = phone;
-        this.email = email;
-        this.address = address;
+    public Customer(int customer_id, int customer_type_id, String customer_name, String customer_birthday, int customer_gender, String customer_id_card, String customer_phone, String customer_email, String customer_address, Service service) {
+        this.customer_id = customer_id;
+        this.customer_type_id = customer_type_id;
+        this.customer_name = customer_name;
+        this.customer_birthday = customer_birthday;
+        this.customer_gender = customer_gender;
+        this.customer_id_card = customer_id_card;
+        this.customer_phone = customer_phone;
+        this.customer_email = customer_email;
+        this.customer_address = customer_address;
+        this.service = service;
     }
 
-    public int getId() {
-        return id;
+    public Customer(int customer_id, int customer_type_id, String customer_name, String customer_birthday, int customer_gender, String customer_id_card, String customer_phone, String customer_email, String customer_address, Service service, AttachService attachService) {
+        this.customer_id = customer_id;
+        this.customer_type_id = customer_type_id;
+        this.customer_name = customer_name;
+        this.customer_birthday = customer_birthday;
+        this.customer_gender = customer_gender;
+        this.customer_id_card = customer_id_card;
+        this.customer_phone = customer_phone;
+        this.customer_email = customer_email;
+        this.customer_address = customer_address;
+        this.service = service;
+        this.attachService = attachService;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Customer(String customer_name) {
+        this.customer_name = customer_name;
     }
 
-    public int getCustomerType() {
-        return customerType;
+    public int getCustomer_id() {
+        return customer_id;
     }
 
-    public void setCustomerType(int customerType) {
-        this.customerType = customerType;
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = customer_id;
     }
 
-    public String getName() {
-        return name;
+    public int getCustomer_type_id() {
+        return customer_type_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCustomer_type_id(int customer_type_id) {
+        this.customer_type_id = customer_type_id;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public String getCustomer_name() {
+        return customer_name;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setCustomer_name(String customer_name) {
+        this.customer_name = customer_name;
     }
 
-    public int getGender() {
-        return gender;
+    public String getCustomer_birthday() {
+        return customer_birthday;
     }
 
-    public void setGender(int gender) {
-        this.gender = gender;
+    public void setCustomer_birthday(String customer_birthday) {
+        this.customer_birthday = customer_birthday;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public int getCustomer_gender() {
+        return customer_gender;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setCustomer_gender(int customer_gender) {
+        this.customer_gender = customer_gender;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getCustomer_id_card() {
+        return customer_id_card;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setCustomer_id_card(String customer_id_card) {
+        this.customer_id_card = customer_id_card;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCustomer_phone() {
+        return customer_phone;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomer_phone(String customer_phone) {
+        this.customer_phone = customer_phone;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCustomer_email() {
+        return customer_email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCustomer_email(String customer_email) {
+        this.customer_email = customer_email;
+    }
+
+    public String getCustomer_address() {
+        return customer_address;
+    }
+
+    public void setCustomer_address(String customer_address) {
+        this.customer_address = customer_address;
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public void setService(Service service) {
+        this.service = service;
+    }
+
+    public AttachService getAttachService() {
+        return attachService;
+    }
+
+    public void setAttachService(AttachService attachService) {
+        this.attachService = attachService;
     }
 }
