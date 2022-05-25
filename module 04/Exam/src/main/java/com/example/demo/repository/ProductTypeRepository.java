@@ -1,4 +1,10 @@
 package com.example.demo.repository;
 
-public interface ProductTypeList {
+import com.example.demo.model.Product;
+import com.example.demo.model.ProductType;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductTypeRepository extends JpaRepository<ProductType, Long> {
 }

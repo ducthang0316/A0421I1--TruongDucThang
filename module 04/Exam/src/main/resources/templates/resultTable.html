@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="searchTable">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Select</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Product Type </th>
+            <th scope="col">Status</th>
+            <th scope="col" colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product: ${productList}">
+            <td scope="row" th:text="${product.id}"></td>
+            <td scope="row" ></td>
+            <td scope="row" th:text="${product.name}"></td>
+            <td scope="row" th:text="${product.price}"></td>
+            <td scope="row" th:text="${product.productType.getTypeName()}"></td>
+            <td scope="row" th:text="${product.status}"></td>
+
+            <td scope="row">
+                <a class="btn btn-primary " role="button"
+                   th:href="@{/product/__${product.id}__/edit}">Edit
+                </a>
+            </td>
+            <td scope="row">
+                <button class="btn btn-danger " role="button"
+                        th:onclick="'javascript:showDelete(\''+ ${product.id} + '\')'">Delete
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--Phan trang -->
+
+<nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" th:href="@{'/product/list'(page=${productList.number -1} )}" th:if="${productList.hasPrevious()}">Previous</a>
+        </li>
+        <li class="page-item">
+            <span th:text="${productList.number + 1}"></span> <span th:text=" of "></span> <span th:text="${productList.totalPages}"></span>
+        </li>
+        <li class="page-item">
+            <a class="page-link" th:href="@{'/product/list'(page=${productList.number +1} )}" th:if="${productList.hasNext()}">Next</a>
+        </li>
+    </ul>
+</nav>
 </body>
 </html>
