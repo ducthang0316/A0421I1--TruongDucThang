@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+<!--    bootstrap 5.-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+    </script>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<a th:href="@{/customer/create}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create new customer</a>
+<br>
+<h3>Customer List</h3>
+<h4 th:if="${message}" th:text="${message}" style="color: red" ></h4>
+<div class="input-group mb-6">
+    <form th:action="@{/customer/search}" method="post">
+        <input type="text" class="form-control" placeholder="Search by name"  id="searchValue" name="keySearch">
+
+    </form>
+
+<!--    <form action="">-->
+<!--        <label>Filter Customer Type</label>-->
+<!--        <select th:name="typeId" onchange="this.form.submit()">-->
+<!--            <option selected disabled value="">Customer Type</option>-->
+<!--            <th:block th:each="item : ${listCustomerType}">-->
+<!--                <option th:value="${item.id}" th:text="${item.customerTypeName}"></option>-->
+<!--            </th:block>-->
+<!--        </select>-->
+<!--    </form>-->
+
+        <button class="btn btn-outline-primary" type="submit" id="button-addon2"
+                th:onclick="'javascript:search()'">Search</button>
+
+</div>
+<div id="searchTable">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">BirthDay</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Id Card</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Customer Type</th>
+        </tr>
+        </thead>
+        <tbody id="searchResult">
+        <tr th:each="customer: ${customerList}">
+            <td scope="row" th:text="${customer.id}"></td>
+            <td scope="row" th:text="${customer.name}"></td>
+            <td scope="row" th:text="${customer.birthday}"></td>
+            <td scope="row" th:switch="${customer.gender}">
+                <span th:case="1" th:text="Man"></span>
+                <span th:case="0" th:text="Woman"></span>
+            </td>
+            <td scope="row" th:text="${customer.idCard}"></td>
+            <td scope="row" th:text="${customer.phone}"></td>
+            <td scope="row" th:text="${customer.email}"></td>
+            <td scope="row" th:text="${customer.address}"></td>
+            <td scope="row" th:text="${customer.customerType.getCustomerTypeName()}"></td>
+            <input type="hidden" id="pageNumber" th:value="${customerList.number}">
+            <td scope="row">
+                <button class="btn btn-primary btnModalView" role="button"
+                   th:href="@{/customer/__${customer.id}__/view}">View
+                </button>
+                <input type="hidden" th:value="${customer.id}">
+            </td>
+            <td scope="row">
+                <a class="btn btn-primary " role="button"
+                   th:href="@{/customer/__${customer.id}__/edit}">Edit
+                </a>
+            </td>
+            <td scope="row">
+                <button class="btn btn-danger " role="button"
+                   th:onclick="'javascript:showDelete(\''+ ${customer.id} + '\')'">Delete
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--Phan trang -->
+
+<nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" th:href="@{'/customer/listPage'(page=${customerList.number -1} )}" th:if="${customerList.hasPrevious()}">Previous</a>
+        </li>
+        <li class="page-item">
+            <span th:text="${customerList.number + 1}"></span> <span th:text=" of "></span> <span th:text="${customerList.totalPages}"></span>
+        </li>
+        <li class="page-item">
+            <a class="page-link" th:href="@{'/customer/listPage'(page=${customerList.number +1} )}" th:if="${customerList.hasNext()}">Next</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Modal -->
+<div>
+<div class="modal fade" id="modalCustomer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Customer Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script>
+    // view
+    $(document).ready(function () {
+        $(".btnModalView").click(function () {
+            let id = $(this).next().val();
+            console.log(id)
+            $.ajax({
+                type: "GET",
+                url: "/customer/"+ id +"/view",
+                dataType: "HTML",
+                success:  function (data) {
+                    $(".modal-body").html(data);
+                    $("#modalCustomer").modal("show");
+                }
+            });
+
+        });
+
+    });
+</script>
+
+<script>
+    function showDelete(id) {
+        $.ajax({
+            type: "GET",
+            url: "/customer/"+ id +"/delete",
+            dataType: "HTML",
+            success: function (data) {
+                $(".modal-body").html(data);
+                $("#modalCustomer").modal('show');
+            }
+        })
+    }
+</script>
+
+<script>
+    function deleteCustomer(id) {
+        $.ajax({
+            type: "POST",
+            url: "/customer/"+ id +"/delete",
+            dataType: "HTML",
+            success: function (data) {
+                $("#modalCustomer").modal('hide');
+                $("#searchTable").html(data);
+            }
+        })
+    }
+</script>
+
+<script>
+    function search() {
+        let name = $("#searchValue").val();
+        $.ajax({
+            type: "POST",
+            url: "/customer/search",
+            data: {
+                keySearch: name
+            },
+            dataType: "HTML",
+            success: function (data) {
+                $("#modalCustomer").modal('hide');
+                $("#searchTable").html(data);
+            }
+        })
+    }
+</script>
+
+<script>
+    function searchNext() {
+        let name = $("#searchValue").val();
+        let number = $("#pageNumber").val();
+        $.ajax({
+            type: "POST",
+            url: "/customer/search",
+            data: {
+                page: number,
+                keySearch: name
+            },
+            dataType: "HTML",
+            success: function (data) {
+                $("#modalCustomer").modal('hide');
+                $("#searchTable").html(data);
+            }
+        })
+    }
+</script>
+
+<script>
+    function searchPrevious() {
+        let name = $("#searchValue").val();
+        let number = $("#pageNumber").val();
+        $.ajax({
+            type: "POST",
+            url: "/customer/search",
+            data: {
+                page: number,
+                keySearch: name
+            },
+            dataType: "HTML",
+            success: function (data) {
+                $("#modalCustomer").modal('hide');
+                $("#searchTable").html(data);
+            }
+        })
+    }
+</script>
+</html>
